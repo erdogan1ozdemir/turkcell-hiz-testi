@@ -1,4 +1,4 @@
-# Keyword Metrics — Ahrefs Keywords Explorer (country: tr) · gözlem 2026-06-26
+# Keyword Metrics · Ahrefs Keywords Explorer (country: tr) · gözlem 2026-06-26
 
 Kaynak: Ahrefs `keywords-explorer-overview`, ülke `tr`. Hacim = son 12 ay ortalaması/ay.
 KD = Keyword Difficulty (0-100). TP = Traffic Potential (#1 sayfanın aldığı toplam organik trafik).

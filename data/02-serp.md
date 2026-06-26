@@ -1,9 +1,9 @@
-# SERP Görünürlüğü — Ahrefs serp-overview (country: tr) · gözlem 2026-06-21 → 2026-06-26
+# SERP Görünürlüğü · Ahrefs serp-overview (country: tr) · gözlem 2026-06-21 → 2026-06-26
 
 DR = Domain Rating, UR = URL Rating, Trafik = sayfanın aylık organik trafiği (tahmini).
 Turkcell satırı **kalın**. pos1/3 sık sık `knowledge_card` (Google'ın kendi kutusu).
 
-## "hız testi" (1.570.000/ay) — Turkcell #4
+## "hız testi" (1.570.000/ay) · Turkcell #4
 | # | Sonuç | DR | UR | Trafik | Backlink | RefDom |
 |---:|---|---:|---:|---:|---:|---:|
 | 1 | knowledge_card | - | - | - | - | - |
@@ -17,7 +17,7 @@ Turkcell satırı **kalın**. pos1/3 sık sık `knowledge_card` (Google'ın kend
 | 9 | superonline.net/hiz-testi | 59 | 13 | 162.156 | 516 | 268 |
 | 10 | dahaonline.com.tr | 2 | 7 | 109.671 | 50 | 49 |
 
-## "speedtest" (1.280.000/ay) — Turkcell #2 (güçlü)
+## "speedtest" (1.280.000/ay) · Turkcell #2 (güçlü)
 | # | Sonuç | DR | UR | Trafik |
 |---:|---|---:|---:|---:|
 | 1 | speedtest.net (+ sitelinks) | 91 | 46 | 1.998.212 |
@@ -27,7 +27,7 @@ Turkcell satırı **kalın**. pos1/3 sık sık `knowledge_card` (Google'ın kend
 | 5 | fast.com/tr/ | 86 | 20 | 668.644 |
 | 6 | turk.net/hiz-testi | 66 | 12 | 267.459 |
 
-## "internet hız testi" (844.000/ay) — Turkcell #4
+## "internet hız testi" (844.000/ay) · Turkcell #4
 | # | Sonuç | DR | UR | Trafik |
 |---:|---|---:|---:|---:|
 | 1 | knowledge_card | - | - | - |
@@ -40,7 +40,7 @@ Turkcell satırı **kalın**. pos1/3 sık sık `knowledge_card` (Google'ın kend
 | 8 | superonline.net/hiz-testi | 59 | 13 | 162.156 |
 | 11 | youtube (Ev İnterneti Hız Testi videosu) | 99 | 4 | 31.725 |
 
-## "speed test" (478.000/ay) — Turkcell #4
+## "speed test" (478.000/ay) · Turkcell #4
 | # | Sonuç | DR | UR | Trafik |
 |---:|---|---:|---:|---:|
 | 1 | speedtest.net | 91 | 46 | 1.998.212 |

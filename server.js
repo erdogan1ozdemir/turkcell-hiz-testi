@@ -1,4 +1,4 @@
-// Sıfır bağımlılıklı statik sunucu — Railway/Render/Node host'ları için.
+// Sıfır bağımlılıklı statik sunucu · Railway/Render/Node host'ları için.
 // Vercel statik olarak servis eder ve bu dosyayı yok sayar (yalnızca PORT'lu host'lar kullanır).
 // "/" -> index.html (rapor), "/demo" -> demo/index.html (tasarım). cleanUrls davranışı.
 const http = require('http');

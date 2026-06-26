@@ -1,4 +1,4 @@
-# Hedef Sayfa Denetimi — turkcell.com.tr/hiz-testi · gözlem 2026-06-26
+# Hedef Sayfa Denetimi · turkcell.com.tr/hiz-testi · gözlem 2026-06-26
 
 Kaynak: DataForSEO `on_page_instant_pages` + `on_page_content_parsing` (JS render açık).
 
@@ -32,12 +32,12 @@ bir domaine link-equity aktarıyor ve marka sinyalini bölüyor.
 | 200 MBPS internet (gövde) | /ev-interneti/200-mbps | turkcell.com.tr ev-interneti tarife |
 | ev interneti (gövde) | /ev-interneti | turkcell.com.tr/ev-interneti |
 
-### Turkcell içi linkler (doğru — korunmalı)
+### Turkcell içi linkler (doğru · korunmalı)
 - Superbox Altyapı Sorgulama → turkcell.com.tr/ev-interneti/superbox-basvuru-ve-altyapi-sorgulama
 - Superbox 5G Ön Talep → turkcell.com.tr/ev-interneti/superbox-5g-on-talep-olusturma
 - Router → turkcell.com.tr/kampanya/...
 
-## Mevcut FAQ envanteri (37 soru — H3) — Excel önerileri büyük ölçüde UYGULANMIŞ
+## Mevcut FAQ envanteri (37 soru · H3) · Excel önerileri büyük ölçüde UYGULANMIŞ
 Hız Testi Nedir? · İnternet Hız Testi (Speed Test) Nedir? · Nasıl Yapılır? · Nasıl Çalışır? · İnternet Hızı Nasıl Ölçülür? ·
 İndirme Hızı Nasıl Ölçülür? · Hat Hızını Nasıl Öğrenebilirsin? · Öncesinde Dikkat? · Yaparken Dikkat? · En Doğru Testi Nasıl? ·
 Wi-Fi ile Hız Testi? · Nelere Dikkat? · Sonuçlar Ne Anlama Gelir? · Neye Bakılır? · Metrikler? · Packet Loss? · Jitter? ·

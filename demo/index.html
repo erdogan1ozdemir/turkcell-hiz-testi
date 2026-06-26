@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Hız Testi, Speed Test, İnternet Hız Testi - Turkcell (Tasarım Örneği)</title>
-<meta name="description" content="Turkcell hız testi sayfası için CRO/dönüşüm tasarım örneği — 4 varyant.">
+<meta name="description" content="Turkcell hız testi sayfası için CRO/dönüşüm tasarım örneği · 4 varyant.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -95,11 +95,9 @@ section.blk{padding:30px 0}
 .result-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 .result-head .badge{background:var(--green);color:#04211a;font-weight:800;border-radius:var(--r-pill);padding:5px 12px;font-size:.82rem}
 
-.smart{background:linear-gradient(135deg,var(--navy-3),var(--navy-card));border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;position:relative;overflow:hidden}
-.smart::before{content:"";position:absolute;inset:-2px;border-radius:calc(var(--r-lg) + 2px);background:conic-gradient(from var(--a,0deg),var(--yellow),transparent 30%,transparent 70%,var(--yellow));opacity:.55;z-index:0;animation:spin 6s linear infinite}
-@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
-@keyframes spin{to{--a:360deg}}
-@media(prefers-reduced-motion:reduce){.smart::before,.go.testing{animation:none}}
+/* Temiz çerçeve + yumuşak gölge (parantez/conic-arc süsleme YOK) */
+.smart{background:linear-gradient(135deg,var(--navy-3),var(--navy-card));border:1px solid rgba(255,196,12,.4);border-radius:var(--r-lg);padding:22px;position:relative;box-shadow:0 14px 38px rgba(0,0,0,.4),0 0 0 1px rgba(255,196,12,.12)}
+@media(prefers-reduced-motion:reduce){.go.testing{animation:none}}
 .smart>*{position:relative;z-index:1}
 .smart .reco{font-size:1.3rem;font-weight:800;margin:4px 0 8px}.smart .reco b{color:var(--yellow)}
 
@@ -196,7 +194,7 @@ body[data-variant="c"] [data-only~="c"],body[data-variant="d"] [data-only~="d"]{
 </head>
 <body data-variant="a">
 
-<!-- ====== KLON KABUK: HEADER (minimal, sadece logo — gerçek LP böyle) ====== -->
+<!-- ====== KLON KABUK: HEADER (minimal, sadece logo · gerçek LP böyle) ====== -->
 <header class="site">
   <div class="nav">
     <a class="brand" href="#" aria-label="Turkcell">
@@ -283,22 +281,22 @@ body[data-variant="c"] [data-only~="c"],body[data-variant="d"] [data-only~="d"]{
     <!-- D · LEAD/ALTYAPI -->
     <div data-only="d" id="lead"><div class="lead">
       <div class="eyebrow">Sana en uygun hızı bulalım</div>
-      <div class="reco" style="font-weight:800;font-size:1.3rem;margin:6px 0">Hızın <b style="color:var(--yellow)" id="recoSpeedD">48</b> Mbps — adresinde daha hızlısı olabilir.</div>
+      <div class="reco" style="font-weight:800;font-size:1.3rem;margin:6px 0">Hızın <b style="color:var(--yellow)" id="recoSpeedD">48</b> Mbps · adresinde daha hızlısı olabilir.</div>
       <p style="color:var(--ink-2);font-size:.9rem">Numaranı bırak, altyapına uygun en yüksek hızı ve sana özel kampanyayı arayıp ücretsiz paylaşalım.</p>
       <div class="row">
         <input type="text" placeholder="Adın Soyadın" aria-label="Ad Soyad">
         <input type="tel" placeholder="Telefon numaran" aria-label="Telefon">
-        <button class="btn btn-y" type="button" onclick="alert('Demo: lead formu — gerçekte Turkcell CRM/başvuruya bağlanır.')">Seni Arayalım</button>
+        <button class="btn btn-y" type="button" onclick="alert('Demo: lead formu · gerçekte Turkcell CRM/başvuruya bağlanır.')">Seni Arayalım</button>
       </div>
       <div class="row" style="margin-top:6px">
         <input type="text" placeholder="Adres / il-ilçe ile altyapı sorgula" aria-label="Adres" style="flex:2">
-        <button class="btn btn-w" type="button" onclick="alert('Demo: altyapı sorgulama — turkcell.com.tr/ev-interneti/superbox-basvuru-ve-altyapi-sorgulama')">Altyapımı Sorgula</button>
+        <button class="btn btn-w" type="button" onclick="alert('Demo: altyapı sorgulama · turkcell.com.tr/ev-interneti/superbox-basvuru-ve-altyapi-sorgulama')">Altyapımı Sorgula</button>
       </div>
-      <div class="note">KVKK kapsamında bilgilerin yalnızca teklif için kullanılır. <b>Tekrarlı lead akışı</b> (hero + sonuç + sayfa sonu) — TurkNet modelinden uyarlandı. Yeni</div>
+      <div class="note">KVKK kapsamında bilgilerin yalnızca teklif için kullanılır. <b>Tekrarlı lead akışı</b> (hero + sonuç + sayfa sonu) · TurkNet modelinden uyarlandı. Yeni</div>
     </div></div>
   </div>
 
-  <p class="note-banner" id="preHint">▲ Yukarıdaki <b>GO</b> butonuna bas — test bitince bu alanda seçili varyantın dönüşüm modülü canlanır. Sağdaki/alttaki seçiciden 4 varyantı dene.</p>
+  <p class="note-banner" id="preHint">▲ Yukarıdaki <b>GO</b> butonuna bas · test bitince bu alanda seçili varyantın dönüşüm modülü canlanır. Sağdaki/alttaki seçiciden 4 varyantı dene.</p>
 </div></section>
 
 <!-- ====== HIZ-İHTİYAÇ TABLOSU (öneri) ====== -->
@@ -342,7 +340,7 @@ body[data-variant="c"] [data-only~="c"],body[data-variant="d"] [data-only~="d"]{
 <!-- ====== MAVİ KART GRID (klon: Turkcell'de Neler Var?) ====== -->
 <section class="blk"><div class="wrap">
   <h2>Turkcell'de neler var?</h2>
-  <p class="desc">Tüm araç ve linkler Turkcell içinde (on-domain) — equity Turkcell'de kalır.</p>
+  <p class="desc">Tüm araç ve linkler Turkcell içinde (on-domain) · equity Turkcell'de kalır.</p>
   <div class="cards">
     <a class="qcard" href="#"><div class="ic">📶</div><div class="t">Altyapı Sorgulama</div><div class="s">turkcell.com.tr</div></a>
     <a class="qcard" href="#"><div class="ic">📍</div><div class="t">Ping Testi</div><div class="s">on-domain · KD 1</div></a>

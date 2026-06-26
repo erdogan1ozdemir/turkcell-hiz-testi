@@ -1,8 +1,8 @@
-# Önceki İki Çalışma — Envanter + Güncel Durum (2026-06-26 canlı sayfaya göre)
+# Önceki İki Çalışma · Envanter + Güncel Durum (2026-06-26 canlı sayfaya göre)
 
 İşaretleme: ★ = önceden iletildi · +★ = önceki önerinin geliştirilmiş hali · (yeni) = bu raporda ilk kez.
 
-## Çalışma 1 — PDF "Turkcell Hız Testi Sayfası 5G Optimizasyon Önerileri"
+## Çalışma 1 · PDF "Turkcell Hız Testi Sayfası 5G Optimizasyon Önerileri"
 Durum: büyük ölçüde **UYGULANMAMIŞ → hâlâ yapılabilir**.
 
 1. GO butonu 5G mini-banner CTA + inlink ("Hızın Gerçek Limitini Merak Ediyor musun?") → canlıda YOK ★
@@ -18,22 +18,22 @@ Durum: büyük ölçüde **UYGULANMAMIŞ → hâlâ yapılabilir**.
 11. WebApplication schema markup → YOK ★
 12. Dataset schema (Mbps↔MB karşılaştırma tablosu) → YOK ★
 
-## Çalışma 2 — Excel "Telco / Internet Hız Testi SSS Önerileri"
+## Çalışma 2 · Excel "Telco / Internet Hız Testi SSS Önerileri"
 Durum: çekirdek + rakip SSS'leri **UYGULANMIŞ**; long-tail mobil SSS'ler ve 5G SSS'ler **eksik**.
 
 ### Mevcut SSS'te bulunuyor (UYGULANDI ✓)
 İnternet Hız Testi (Speed Test) Nedir? · Mbps Nedir? · Nasıl Yapılır? · İnternet Hızı Kaç Olmalı? · Packet Loss? · İnternet Nasıl Hızlandırılır?
 
-### Rakip SSS'leri (UYGULANDI ✓ — artık canlıda)
+### Rakip SSS'leri (UYGULANDI ✓ · artık canlıda)
 Download ve Upload Nedir? ✓ · Hız Testi Ücretli mi? ✓ · Wi-Fi ile Hız Testi Yapabilir miyim? ✓
 
-### Long-tail mobil SSS önerileri (16) — büyük kısmı EKSİK → hâlâ yapılabilir ★
+### Long-tail mobil SSS önerileri (16) · büyük kısmı EKSİK → hâlâ yapılabilir ★
 Canlıda olanlar: jitter ✓ · yavaşlatan uygulamalar (kısmi) ✓ · farklı cihazlar (kısmi) ✓ · gün içi değişkenlik (kısmi) ✓
 EKSİK (★): eski SIM 5G/4.5G sınırı · modem çip seti (Snapdragon/Exynos) · mobil veri vs Wi-Fi farkı · odalar arası fark ·
 kapalı alan mobil düşüklüğü · baz istasyonu uzaklığı · seyahatte hızlı değişim · mobil upload düşüklüğü nedenleri ·
 hız yüksek ama uygulama yavaş · paket azalması etkisi · adil kullanım/hız düşürme politikaları · Carrier Aggregation (CA)
 
-### 5G SSS'leri (Excel + PDF ortak) — EKSİK ★
+### 5G SSS'leri (Excel + PDF ortak) · EKSİK ★
 5G ortalama indirme/yükleme hızı · 5G ile ping ne kadar düşer · sonuçlar neden değişiyor · 5G'de dikkat · 5G her yerde aynı mı
 
 ## Sentez notu

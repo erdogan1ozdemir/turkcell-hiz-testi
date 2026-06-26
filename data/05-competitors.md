@@ -1,4 +1,4 @@
-# Rakip İçerik Analizi — Hız Testi SERP · gözlem 2026-06-26 (DataForSEO içerik parse + ham HTML şema kontrolü)
+# Rakip İçerik Analizi · Hız Testi SERP · gözlem 2026-06-26 (DataForSEO içerik parse + ham HTML şema kontrolü)
 
 ## Karşılaştırma matrisi
 | Marka | Sıra | Test aracı | Dönüşüm/lead | FAQ | Şema | Öne çıkan |
@@ -14,10 +14,10 @@
 SERP'teki **hiçbir rakip JSON-LD şema kullanmıyor** (FAQPage/WebApplication/HowTo/BreadcrumbList hiçbiri).
 → Turkcell için en düşük efor / en yüksek farklılaşma: şema ile rich result + AI Overview/GEO alıntılanabilirlik kapılabilir.
 
-## Türk Telekom neden #2 (Turkcell'in üstünde) — somut farklar
+## Türk Telekom neden #2 (Turkcell'in üstünde) · somut farklar
 1. FAQ derinliği 31'e karşı Turkcell-gövde mantığında 4 (Superonline body); Turkcell kendi sayfasında 37 var ama şemasız.
-2. İhtiyaca göre hız eşleme metni (12-16 / 24-35 / 50 / 100+ Mbps → kullanım) — Turkcell'de yapısal yok.
-3. İndirme süresi karşılaştırma tablosu (100/200/500/1000 Mbps × YouTube/Steam/Tivibu) — yapısal, taranabilir.
+2. İhtiyaca göre hız eşleme metni (12-16 / 24-35 / 50 / 100+ Mbps → kullanım) · Turkcell'de yapısal yok.
+3. İndirme süresi karşılaştırma tablosu (100/200/500/1000 Mbps × YouTube/Steam/Tivibu) · yapısal, taranabilir.
 4. Marka tutarlılığı: baştan sona "Türk Telekom"; Turkcell gövdesi "Superonline" markalı (tutarsızlık).
 5. Markalı test motoru (kendi alan adı); Turkcell public speedtest.net iframe + manuel "Turkcell Host" seçimi (sürtünme).
 6. 5G başvuru akışı + kapsamlı 5G FAQ; Turkcell'de yok.
@@ -26,7 +26,7 @@ TT zayıflıkları (Turkcell'in açık kapıları): şema yok · çift iç içe 
 
 ## Turkcell'de OLMAYAN, eklenmeye değer (öncelik)
 P0: (1) JSON-LD şema (FAQPage+WebApplication+BreadcrumbList) (2) hız-ihtiyaç eşleme **tablosu** (3) FAQ'ı şemayla işaretleme.
-P1 (dönüşüm): (4) **test sonucuna bağlı dinamik paket önerisi — KİMSEDE YOK** (5) net fiyatlı paket kartları (Vodafone) (6) sayfa içi tekrarlı adres/altyapı lead akışı (TurkNet).
+P1 (dönüşüm): (4) **test sonucuna bağlı dinamik paket önerisi · KİMSEDE YOK** (5) net fiyatlı paket kartları (Vodafone) (6) sayfa içi tekrarlı adres/altyapı lead akışı (TurkNet).
 P2: (7) kendi markalı widget (8) jitter+packet loss gösterimi (9) 5G/mobil CTA modülü (10) marka tutarlılığı (Turkcell çatısı) (11) araç ekosistemi internal link (ping/IP/blog).
 
 ## Dönüşüm/lead için en iyi 5 fikir (rakiplerden damıtıldı)
