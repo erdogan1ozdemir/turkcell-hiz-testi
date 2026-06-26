@@ -26,9 +26,15 @@
   --display:'Bricolage Grotesque','Outfit',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);color:var(--ink);background:var(--surface-2);font-size:1.02rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--font);color:var(--ink);background:var(--surface-2);font-size:1.02rem;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100%}
 img{max-width:100%}
+/* mobil taşma koruması: grid track'lerin (1fr) min-content ile şişmesini engelle */
+main{min-width:0;max-width:100%}
+.grid-2,.grid-3,.kpi-grid,.hl-cards,.posts{min-width:0}
+.grid-2>*,.grid-3>*,.kpi-grid>*,.hl-cards>*{min-width:0;max-width:100%}
+.table-wrap{max-width:100%}
+canvas{max-width:100%}
 a{color:var(--brand)}a:hover{text-decoration:underline}
 h1,h2,h3,h4,.eyebrow{font-family:var(--display)}
 
@@ -83,19 +89,24 @@ p{margin:8px 0}
 .kpi .lbl{font-size:.74rem;color:rgba(255,255,255,.82);margin-top:2px}
 .kpi .sub{font-size:.68rem;color:rgba(255,255,255,.6);margin-top:3px}
 .hl-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
-.hl{border-radius:var(--r-md);padding:16px;border:1px solid var(--line);background:var(--surface)}
+/* hl: üst renkli bant (parantez/sol-kenar YOK) + gölge */
+.hl{position:relative;overflow:hidden;border-radius:var(--r-md);padding:18px 16px 16px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow-h)}
+.hl::before{content:"";position:absolute;top:0;left:0;right:0;height:4px}
 .hl .t{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
 .hl .v{font-family:var(--display);font-weight:800;color:var(--brand);font-size:1.05rem;margin:6px 0 4px}
-.hl.now{border-left:4px solid var(--red)}
-.hl.opp{border-left:4px solid var(--yellow-deep)}
-.hl.act{border-left:4px solid var(--green)}
+.hl.now::before{background:var(--red)}
+.hl.opp::before{background:var(--yellow-deep)}
+.hl.act::before{background:var(--green)}
 
-.callout{border-radius:var(--r-md);padding:14px 16px;margin:14px 0;border:1px solid var(--line);background:var(--surface-3)}
+/* callout: belirgin gölge + çerçeve (zeminden net ayrışır) */
+.callout{border-radius:var(--r-md);padding:14px 16px;margin:14px 0;border:1px solid var(--line);background:var(--surface-3);box-shadow:var(--shadow)}
 .callout--info{background:var(--blue-soft);border-color:#c3d2ff}
 .callout--pos{background:var(--green-soft);border-color:#aee3c3}
 .callout--warn{background:var(--amber-soft);border-color:#f0d59a}
 .callout--bad{background:var(--red-soft);border-color:#f3b7b0}
-.insight{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--yellow-deep);border-radius:var(--r-md);padding:15px 18px;margin:13px 0;box-shadow:var(--shadow)}
+/* insight: dolu/tonlu panel + üst renkli bant (parantez sol-kenar KALDIRILDI) */
+.insight{position:relative;overflow:hidden;background:linear-gradient(180deg,#fffdf3,var(--surface-3));border:1px solid #e6dcb6;border-radius:var(--r-md);padding:18px 18px 16px;margin:14px 0;box-shadow:var(--shadow-h)}
+.insight::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--yellow),var(--yellow-deep))}
 .insight b{color:var(--brand)}
 
 /* tables */
@@ -176,16 +187,36 @@ ul.cross li::before{content:"✕";color:var(--red)}
 .btn-y:hover{transform:translateY(-2px);text-decoration:none}
 .btn-o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
 
-.toc-fab{display:none;position:fixed;right:16px;bottom:18px;z-index:80;background:var(--brand);color:#fff;border:none;border-radius:var(--r-pill);padding:11px 16px;font-weight:800;box-shadow:var(--shadow-h)}
+.toc-fab{display:none;align-items:center;gap:7px;position:fixed;right:14px;bottom:16px;z-index:80;background:var(--brand);color:#fff;border:none;border-radius:var(--r-pill);padding:12px 18px;font-weight:800;font-family:var(--font);font-size:.88rem;box-shadow:var(--shadow-h);cursor:pointer}
+/* mobil ToC bottom-sheet (turkcell-one deseni) */
+.toc-sheet{display:none !important}
+.toc-sheet.open{position:fixed;inset:0;z-index:90}
+.toc-sheet__bg{position:absolute;inset:0;background:rgba(8,16,40,.55)}
+.toc-sheet__panel{position:absolute;left:0;right:0;bottom:0;max-height:78vh;overflow:auto;background:var(--surface);border-radius:18px 18px 0 0;padding:14px 14px 26px;box-shadow:0 -12px 40px rgba(0,0,0,.3)}
+.toc-sheet__panel h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:6px 8px 10px;display:flex;justify-content:space-between;align-items:center}
+.toc-sheet__panel a{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:10px;color:var(--ink-2);font-size:.95rem;font-weight:700;border-bottom:1px solid var(--line-soft);text-decoration:none}
+.toc-sheet__panel a:active{background:var(--surface-2)}
+.toc-sheet__panel a .n{width:22px;height:22px;border-radius:6px;background:var(--surface-2);color:var(--ink-3);font-size:.66rem;font-weight:800;display:grid;place-items:center;flex:none}
+.toc-close{border:none;background:var(--surface-2);width:30px;height:30px;border-radius:50%;font-size:1.2rem;color:var(--ink-2);cursor:pointer;line-height:1}
 footer{max-width:var(--maxw);margin:0 auto;padding:18px 22px 50px;color:var(--ink-3);font-size:.8rem;text-align:center}
 footer b{color:var(--brand)}
 
 @media(max-width:900px){
-  .layout{grid-template-columns:1fr;padding:16px 13px 60px}
+  .layout{grid-template-columns:1fr;padding:16px 12px 72px}
   .sidenav{display:none}.kpi-grid{grid-template-columns:repeat(2,1fr)}
   .grid-2,.grid-3,.hl-cards{grid-template-columns:1fr}
-  .section h2{font-size:1.4rem}.hero h2{font-size:1.6rem}
-  .toc-fab{display:block}
+  .section{padding:18px 15px}
+  .section h2{font-size:1.3rem;line-height:1.18}.hero h2{font-size:1.4rem}
+  .hero .lead{font-size:.98rem}
+  .topbar .in{padding:9px 13px}.topbar .meta{font-size:.66rem;gap:6px}
+  table{font-size:.82rem}thead th,tbody td{padding:8px 9px}
+  .btnrow{flex-direction:column}.btnrow .btn{width:100%;justify-content:center}
+  .toc-fab{display:inline-flex}
+  .toc-sheet.open{display:block !important}
+}
+@media(max-width:420px){
+  .kpi-grid{grid-template-columns:1fr}
+  .section h2{font-size:1.18rem}.hero h2{font-size:1.28rem}
 }
 </style>
 </head>
@@ -809,6 +840,27 @@ footer b{color:var(--brand)}
 </div>
 
 <button class="toc-fab" id="tocFab">☰ Bölümler</button>
+<div class="toc-sheet" id="tocSheet">
+  <div class="toc-sheet__bg" data-close></div>
+  <div class="toc-sheet__panel">
+    <h4>Bölümler <button class="toc-close" data-close aria-label="Kapat">&times;</button></h4>
+    <a href="#ozet"><span class="n">01</span> Yönetici Özeti</a>
+    <a href="#yontem"><span class="n">02</span> Yöntem &amp; Kapsam</a>
+    <a href="#durum"><span class="n">03</span> Sayfa Rolü &amp; Mevcut Durum</a>
+    <a href="#serp"><span class="n">04</span> SERP &amp; Görünürlük</a>
+    <a href="#kelime"><span class="n">05</span> Kelime &amp; Talep Havuzu</a>
+    <a href="#geo"><span class="n">06</span> AI Overview &amp; GEO</a>
+    <a href="#rakip"><span class="n">07</span> Rakip İçerikte Neler Var</a>
+    <a href="#linkler"><span class="n">08</span> Eski Linkler &amp; İç Yönlendirme</a>
+    <a href="#cro"><span class="n">09</span> CRO / Dönüşüm / Lead</a>
+    <a href="#teknik"><span class="n">10</span> Teknik · Hız · fast.com</a>
+    <a href="#aksiyon"><span class="n">11</span> Aksiyon Planı &amp; Öneriler</a>
+    <a href="#brief"><span class="n">12</span> İçerik Brief'leri</a>
+    <a href="#onceki"><span class="n">13</span> Önceki Çalışmaların Durumu</a>
+    <a href="#yol"><span class="n">14</span> Öncelik &amp; Yol Haritası</a>
+    <a href="#sozluk"><span class="n">15</span> Terim Sözlüğü &amp; Kaynaklar</a>
+  </div>
+</div>
 <div class="lightbox" id="lb"><span class="lightbox__close" id="lbClose">&times;</span><div><img id="lbImg" src="" alt=""><div class="lightbox__cap" id="lbCap"></div></div><div class="lightbox__hint">Kaydırarak tüm sayfayı gör · kapatmak için ESC veya boşluğa tıkla</div></div>
 <div class="termtip" id="termtip"></div>
 
@@ -845,7 +897,13 @@ document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
   const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
   const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const i=secs.indexOf(e.target);links.forEach(l=>l.classList.remove('active'));if(links[i])links[i].classList.add('active');}});},{rootMargin:'-30% 0px -60% 0px'});
   secs.forEach(s=>s&&obs.observe(s));
-  document.getElementById('tocFab').addEventListener('click',()=>document.getElementById('ozet').scrollIntoView({behavior:'smooth'}));
+  const sheet=document.getElementById('tocSheet');
+  const openSheet=()=>sheet.classList.add('open');
+  const closeSheet=()=>sheet.classList.remove('open');
+  document.getElementById('tocFab').addEventListener('click',openSheet);
+  sheet.querySelectorAll('[data-close]').forEach(e=>e.addEventListener('click',closeSheet));
+  sheet.querySelectorAll('.toc-sheet__panel a').forEach(a=>a.addEventListener('click',closeSheet));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet();});
 })();
 // charts
 window.addEventListener('load',()=>{
