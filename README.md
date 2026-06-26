@@ -7,19 +7,25 @@ ve sayfayı **dönüşüm/lead** kanalına çevirmeyi hedefleyen danışmanlık 
 `hedef-lp-rapor-tasarim` skill'i ile üretilmiştir. Önceki iki çalışma (5G optimizasyon PDF'i + SSS Excel'i)
 dikkate alınmış, durumları madde madde işaretlenmiştir.
 
-## Çıktılar
-| Klasör | İçerik |
+## Yayın (Vercel)
+- **Rapor:** https://turkcell-hiz-testi.vercel.app/ (kök)
+- **Tasarım örneği:** https://turkcell-hiz-testi.vercel.app/demo (`#v=a|b|c|d` ile varyant)
+
+## Çıktılar / repo yapısı
+| Yol | İçerik |
 |---|---|
-| [`turkcell-rapor-html/`](turkcell-rapor-html/index.html) | SEO + GEO + rakip analizi + CRO HTML raporu (14 bölüm, Turkcell marka renkleri, grafikler, ekran görüntüleri) |
-| [`turkcell-tasarim-html/`](turkcell-tasarim-html/index.html) | Hedef sayfa klon kabuğu + **4 CRO/dönüşüm varyantı** + yüzen varyant seçici (canlı demo test) |
-| `turkcell-rapor-html/data/` | Ham bulgular (keyword, SERP, sayfa denetimi, rakip distilasyonu) — kanıt |
+| [`index.html`](index.html) | SEO + GEO + rakip analizi + CRO HTML raporu (14 bölüm, Turkcell marka renkleri, grafikler, ekran görüntüleri) — **kökte yayınlanır** |
+| [`demo/`](demo/index.html) | Hedef sayfa klon kabuğu + **4 CRO/dönüşüm varyantı** + yüzen varyant seçici (canlı demo test) — **/demo'da yayınlanır** |
+| `assets/screenshots/` | Rapordaki ekran görüntüleri |
+| `data/` | Ham bulgular (keyword, SERP, sayfa denetimi, rakip distilasyonu) — kanıt |
+| `vercel.json` | cleanUrls ayarı |
 | `CALISMA-TAKIP.md` | Adım adım ne yapıldı, hangi veri nereden |
 
 ## Yerel önizleme
 ```bash
 python3 -m http.server 8842
-# Rapor:   http://localhost:8842/turkcell-rapor-html/index.html
-# Tasarım: http://localhost:8842/turkcell-tasarim-html/index.html  (#v=a|b|c|d ile varyant)
+# Rapor:   http://localhost:8842/                (index.html)
+# Tasarım: http://localhost:8842/demo/index.html  (#v=a|b|c|d ile varyant)
 ```
 
 ## Öneri işaretleme sistemi
