@@ -7,9 +7,11 @@ ve sayfayı **dönüşüm/lead** kanalına çevirmeyi hedefleyen danışmanlık 
 `hedef-lp-rapor-tasarim` skill'i ile üretilmiştir. Önceki iki çalışma (5G optimizasyon PDF'i + SSS Excel'i)
 dikkate alınmış, durumları madde madde işaretlenmiştir.
 
-## Yayın (Vercel)
-- **Rapor:** https://turkcell-hiz-testi.vercel.app/ (kök)
+## Yayın (Vercel + Railway uyumlu)
+- **Rapor:** https://turkcell-hiz-testi.vercel.app/ (kök `index.html`)
 - **Tasarım örneği:** https://turkcell-hiz-testi.vercel.app/demo (`#v=a|b|c|d` ile varyant)
+- **Vercel:** statik servis (`vercel.json` · cleanUrls). **Railway/Render:** `npm start` → `server.js` (`PORT` dinler).
+- Demo **tek dosya self-contained**'dır (CSS/JS/logo inline) → hiçbir host'ta stil bozulmaz.
 
 ## Çıktılar / repo yapısı
 | Yol | İçerik |
