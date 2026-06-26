@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hız Testi, Speed Test, İnternet Hız Testi | Turkcell — Tasarım Örneği</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-variant="a">
+
+<!-- ============ KLON KABUK: HEADER ============ -->
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="#"><span class="mark">T</span> Turkcell</a>
+    <nav class="links">
+      <a href="#">Bireysel</a><a href="#">Ev İnterneti</a><a href="#">Mobil</a><a href="#">5G</a><a href="#">Pasaj</a><a href="#">Destek</a>
+    </nav>
+    <div class="right">
+      <span class="login">Giriş Yap</span>
+      <a class="btn btn-y btn-sm" href="#">Online İşlemler</a>
+    </div>
+  </div>
+</header>
+<div class="crumb"><a href="#">Anasayfa</a> › <a href="#">İnternet</a> › <span style="color:var(--yellow)">Hız Testi</span></div>
+
+<!-- ============ HERO + TEST WIDGET ============ -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">İnternet Hız Testi · Speed Test</div>
+      <h1>İnternet hızını <span class="y">saniyeler içinde</span> ölç</h1>
+      <p class="sub">Download, upload, ping ve jitter değerlerini Turkcell sunucusuyla en doğru şekilde ölç. Sonucuna göre sana en uygun hızı birlikte bulalım.</p>
+      <div class="tips">
+        <span class="tip"><span class="i">1</span> Diğer cihazların bağlantısını kes</span>
+        <span class="tip"><span class="i">2</span> Ethernet kablosu kullan</span>
+        <span class="tip"><span class="i">3</span> Arka plan indirmelerini durdur</span>
+      </div>
+      <!-- D varyantı: hero altyapı lead CTA -->
+      <div data-only="d" style="margin-top:18px">
+        <a class="btn btn-y btn-lg" href="#lead">Adresimde hangi hız var? Sorgula →</a>
+      </div>
+    </div>
+
+    <div class="gauge-card">
+      <div class="gauge" id="gauge">
+        <button class="go" id="goBtn">GO</button>
+      </div>
+      <div class="metrics">
+        <div class="metric"><div class="v" id="mDown">–</div><div class="l">Download Mbps</div></div>
+        <div class="metric"><div class="v" id="mUp">–</div><div class="l">Upload Mbps</div></div>
+        <div class="metric"><div class="v" id="mPing">–</div><div class="l">Ping ms</div></div>
+      </div>
+      <div class="server">Sunucu: <b>Turkcell İstanbul</b> · değiştir</div>
+      <div class="disc">Sonuçlar Ookla altyapısı ile ölçülür. Mobil ağda test, internet paketinizden veri tüketir.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULT PANEL (varyanta göre değişen CRO çekirdeği) ============ -->
+<section class="blk" style="padding-top:6px">
+  <div class="wrap">
+    <div id="resultPanel">
+      <div class="result-head">
+        <span class="badge">✓ Test tamamlandı</span>
+        <span style="color:var(--ink-2)">Ölçülen hız: <b id="rSpeed" style="color:#fff">–</b> Mbps · Ping <b id="rPing" style="color:#fff">–</b> ms</span>
+      </div>
+
+      <!-- VARYANT A · AKILLI SONUÇ: sonuç-tetikli akıllı paket önerisi -->
+      <div data-only="a">
+        <div class="smart">
+          <div class="eyebrow">Sana özel öneri</div>
+          <div class="reco" id="recoA">Hızın <b id="recoSpeed">48</b> Mbps. <span id="recoMsg">4K yayın ve online oyun için <b>Turkcell Fiber 100</b> seni rahatlatır.</span></div>
+          <p style="color:var(--ink-2);font-size:.9rem" id="recoSub">Mevcut hızın yoğun saatlerde 4 kişilik bir evde zorlanabilir. Daha yüksek ve kararlı hız için aşağıdaki paket öneriliyor.</p>
+          <div class="pkgs" style="margin-top:14px">
+            <div class="pkg best"><span class="tag">SANA ÖNERİLEN</span><div class="name">Fiber 100</div><div class="spd">100 Mbps</div><div class="price">799 TL<span style="font-size:.8rem">/ay</span></div><ul><li>Wi-Fi 6 modem dahil</li><li>12 ay fiyat garantisi</li><li>Ücretsiz kurulum</li></ul><a class="btn btn-y" href="#">Hemen Başvur</a></div>
+            <div class="pkg"><span class="tag" style="background:var(--navy-3);color:var(--yellow)">EN HIZLI</span><div class="name">Fiber 1000</div><div class="spd">1000 Mbps</div><div class="price">1.149 TL<span style="font-size:.8rem">/ay</span></div><ul><li>Eşit download/upload</li><li>Oyuncu &amp; yayıncı için</li><li>Wi-Fi 6 modem</li></ul><a class="btn btn-o" href="#">İncele</a></div>
+            <div class="pkg"><span class="tag" style="background:var(--navy-3);color:var(--yellow)">MOBİL</span><div class="name">Superbox 5G</div><div class="spd">5G hız</div><div class="price">Kurulumsuz</div><ul><li>Taşınabilir internet</li><li>Altyapı beklemeden</li><li>Hemen kullan</li></ul><a class="btn btn-o" href="#">İncele</a></div>
+          </div>
+          <div class="note-banner" data-only="a"><b>Önerinin kalbi:</b> Bu modül ölçülen hıza göre değişir (KİMSE rakipte yok). Düşük hızda fiber/upgrade, yüksek hızda "5G ile mobilde de bu hız" mesajı gösterir. <b>+★</b> (PDF'teki dinamik mesajın paket-eşlemeli hali)</div>
+        </div>
+      </div>
+
+      <!-- VARYANT B · SADE HIZ: tek net sonuç + tek CTA -->
+      <div data-only="b">
+        <div class="smart" style="text-align:center">
+          <div class="reco" style="font-size:1.6rem">Hızın <b id="recoSpeedB">48</b> Mbps</div>
+          <p style="color:var(--ink-2)">Bağlantın çalışıyor. Daha hızlısını ister misin?</p>
+          <a class="btn btn-y btn-lg" href="#" style="margin-top:10px">Altyapımı sorgula, hızımı yükselt →</a>
+        </div>
+      </div>
+
+      <!-- VARYANT C · DEĞER/PAKET: karşılaştırma + net fiyat -->
+      <div data-only="c">
+        <div class="eyebrow">Hızını Turkcell ile karşılaştır</div>
+        <div class="compare">
+          <div class="col now"><div class="big" id="cNow">48</div><div class="lbl">Şu anki hızın (Mbps)</div></div>
+          <div class="vs">vs</div>
+          <div class="col tc"><div class="big">1000</div><div class="lbl">Turkcell Fiber 1000 (Mbps)</div></div>
+        </div>
+        <p style="text-align:center;color:var(--yellow);font-weight:800;margin:12px 0" id="cMsg">Turkcell ile ~21 kat daha hızlı internet mümkün.</p>
+        <div class="pkgs">
+          <div class="pkg"><div class="name">Fiber 200</div><div class="spd">200 Mbps</div><div class="price"><s>949 TL</s> 799 TL<span style="font-size:.8rem">/ay</span></div><ul><li>~%16 indirimli</li><li>Wi-Fi 6 modem</li></ul><a class="btn btn-o" href="#">Başvur</a></div>
+          <div class="pkg best"><span class="tag">EN ÇOK TERCİH</span><div class="name">Fiber 1000</div><div class="spd">1000 Mbps</div><div class="price">1.149 TL<span style="font-size:.8rem">/ay</span></div><ul><li>Eşit up/down</li><li>12 ay fiyat garantisi</li><li>Ücretsiz kurulum</li></ul><a class="btn btn-y" href="#">Hemen Başvur</a></div>
+          <div class="pkg"><div class="name">Superbox 5G</div><div class="spd">5G</div><div class="price">Kurulumsuz</div><ul><li>Altyapı beklemeden</li><li>Taşınabilir</li></ul><a class="btn btn-o" href="#">İncele</a></div>
+        </div>
+      </div>
+
+      <!-- VARYANT D · LEAD/ALTYAPI: form ile lead toplama -->
+      <div data-only="d" id="lead">
+        <div class="lead">
+          <div class="eyebrow">Sana en uygun hızı bulalım</div>
+          <div class="reco" style="font-family:var(--display);font-weight:800;font-size:1.3rem;margin:6px 0">Hızın <b style="color:var(--yellow)" id="recoSpeedD">48</b> Mbps — adresinde daha hızlısı olabilir.</div>
+          <p style="color:var(--ink-2);font-size:.9rem">Numaranı bırak, altyapına uygun en yüksek hızı ve sana özel kampanyayı arayıp ücretsiz paylaşalım.</p>
+          <div class="row">
+            <input type="text" placeholder="Adın Soyadın" aria-label="Ad Soyad">
+            <input type="tel" placeholder="Telefon numaran" aria-label="Telefon">
+            <button class="btn btn-y" type="button" onclick="alert('Demo: lead formu — gerçekte Turkcell CRM/başvuruya bağlanır.')">Seni Arayalım</button>
+          </div>
+          <div class="row" style="margin-top:6px">
+            <input type="text" placeholder="Adres / il-ilçe ile altyapı sorgula" aria-label="Adres" style="flex:2">
+            <button class="btn btn-o" type="button" onclick="alert('Demo: altyapı sorgulama — turkcell.com.tr/ev-interneti/superbox-basvuru-ve-altyapi-sorgulama')">Altyapımı Sorgula</button>
+          </div>
+          <div class="note">KVKK kapsamında bilgilerin yalnızca teklif için kullanılır. <b style="color:var(--yellow)">Tekrarlı lead akışı</b> (hero + sonuç + sayfa sonu) — TurkNet modelinden uyarlandı. <b>Yeni</b></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note-banner" id="preHint">▲ Yukarıdaki <b>GO</b> butonuna bas — test bitince bu alanda seçili varyantın dönüşüm modülü canlanır. Sağdaki seçiciden 4 varyantı dene.</p>
+  </div>
+</section>
+
+<!-- ============ ORTAK MODÜL: HIZ-İHTİYAÇ EŞLEME TABLOSU (öneri) ============ -->
+<section class="blk">
+  <div class="wrap">
+    <div class="eyebrow">Yeni öneri</div>
+    <h2>Hangi hız <span class="y">hangi kullanıma</span> yeter?</h2>
+    <p class="desc">Her satır ilgili Turkcell pakete bağlanır; bilgilendirici içerik doğrudan dönüşüm yoluna döner (rakiplerde tablo var ama pakete köprü yok).</p>
+    <table class="tbl">
+      <thead><tr><th>Hız</th><th>İdeal kullanım</th><th>10 GB indirme</th><th>Paket</th></tr></thead>
+      <tbody>
+        <tr><td>16–24 Mbps</td><td>E-posta, web, bankacılık</td><td>~1 saat</td><td><a href="#">Fiber'e geç →</a></td></tr>
+        <tr><td>35–50 Mbps</td><td>Full HD yayın, video görüşme</td><td>~27 dk</td><td><a href="#">Fiber 50 →</a></td></tr>
+        <tr><td>100 Mbps</td><td>4K yayın + online oyun, çok cihaz</td><td>~13 dk</td><td><a href="#">Fiber 100 →</a></td></tr>
+        <tr><td>1000 Mbps</td><td>Yayıncılık, indir-beklemeden, kalabalık ev</td><td>~1,5 dk</td><td><a href="#">Fiber 1000 →</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ ORTAK MODÜL: 5G / MOBİL HIZ TESTİ (öneri, +★) ============ -->
+<section class="blk">
+  <div class="wrap">
+    <div class="fiveg">
+      <div>
+        <span class="badge5g">5G · MOBİL</span>
+        <h3>Mobil ve 5G hız testi</h3>
+        <p style="color:var(--ink-2)">Aramaların %76–96'sı mobil. Turkcell 5G ile gecikme milisaniyelere iner, indirme kat kat hızlanır. Mobil testte en doğru sonuç için Turkcell sunucusunu seç.</p>
+        <a class="btn btn-y" href="#" style="margin-top:10px">Turkcell 5G'yi Keşfet →</a>
+      </div>
+      <ul>
+        <li>5G ortalama hız: mevcut mobil teknolojilerin kat kat üzeri</li>
+        <li>Ping &lt; 10 ms: oyun ve canlı yayında kesintisiz</li>
+        <li>Superbox 5G: altyapı beklemeden, kurulumsuz</li>
+        <li>5G her yerde aynı mı? Kapsama ve cihaz uyumuna bağlı</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORTAK MODÜL: EV İNTERNETİ / ARAÇLAR (klon, on-domain linkler) ============ -->
+<section class="blk">
+  <div class="wrap">
+    <h2>Turkcell'de neler var?</h2>
+    <p class="desc">Tüm araç ve linkler Turkcell içinde (on-domain) — equity Turkcell'de kalır.</p>
+    <div class="cards">
+      <a class="qcard" href="#"><div class="ic">📶</div><div class="t">Altyapı Sorgulama</div><div class="s">turkcell.com.tr</div></a>
+      <a class="qcard" href="#"><div class="ic">📍</div><div class="t">Ping Testi</div><div class="s">on-domain · KD 1</div></a>
+      <a class="qcard" href="#"><div class="ic">🌐</div><div class="t">IP Sorgulama</div><div class="s">yeni araç</div></a>
+      <a class="qcard" href="#"><div class="ic">🚀</div><div class="t">Superbox 5G</div><div class="s">Ön talep</div></a>
+      <a class="qcard" href="#"><div class="ic">📡</div><div class="t">Ev İnterneti</div><div class="s">Kampanyalar</div></a>
+      <a class="qcard" href="#"><div class="ic">🛒</div><div class="t">Pasaj</div><div class="s">Modem &amp; cihaz</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORTAK MODÜL: FAQ (klon + öneri: şema ile işaretlenecek) ============ -->
+<section class="blk">
+  <div class="wrap">
+    <div class="eyebrow">FAQPage schema ile işaretlenmeli (+★)</div>
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div class="faq">
+      <details open><summary>İnternet hız testi (speed test) nedir?</summary><div class="ans">Hız testi; bağlantının download (indirme), upload (yükleme) ve ping (gecikme) sürelerini ölçen, bağlantı kalitesini saniyeler içinde raporlayan bir araçtır.</div></details>
+      <details><summary>5G ile ping değeri ne kadar düşer?</summary><div class="ans">5G ile gecikme milisaniyeler seviyesine iner; online oyun ve canlı yayında kesintisiz deneyim sağlar. <em>(Eski 5G önerisinden — yeni eklenen)</em></div></details>
+      <details><summary>Mobil veri ile Wi-Fi hız testi arasındaki fark neden bu kadar büyük olabilir?</summary><div class="ans">Baz istasyonu uzaklığı, kapalı alan, cihaz modem çip seti ve anlık şebeke trafiği mobil sonucu etkiler. <em>(Excel long-tail önerisinden)</em></div></details>
+      <details><summary>Hız testi ücretli mi?</summary><div class="ans">Hayır, hız testi ücretsizdir. Mobil ağda test, internet paketinizden veri tüketir.</div></details>
+      <details><summary>İdeal internet hızı kaç Mbps olmalı?</summary><div class="ans">Kullanıma göre değişir: 16–24 Mbps temel, 50 Mbps oyun, 100 Mbps+ 4K ve çok cihaz, 1000 Mbps yayıncılık ve kalabalık ev için idealdir.</div></details>
+    </div>
+    <!-- son CTA (öneri ★) -->
+    <div class="lead" style="margin-top:18px;text-align:center">
+      <div class="reco" style="font-family:var(--display);font-weight:800;font-size:1.4rem">Testin bitti. Şimdi geleceğin hızını keşfetme zamanı.</div>
+      <p style="color:var(--ink-2)">Sana en uygun Turkcell internetini birlikte bulalım.</p>
+      <a class="btn btn-y btn-lg" href="#lead" style="margin-top:10px">Bana Uygun Paketi Bul →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KLON KABUK: FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <a class="brand" href="#" style="font-size:1.05rem"><span class="mark">T</span> Turkcell</a>
+        <p style="color:var(--ink-3);font-size:.84rem;margin-top:10px">Hız testi, ev interneti, 5G ve daha fazlası. Türkiye'nin dijital operatörü.</p>
+      </div>
+      <div><h4>İnternet</h4><a href="#">Hız Testi</a><a href="#">Ping Testi</a><a href="#">IP Sorgulama</a><a href="#">Altyapı Sorgulama</a><a href="#">Ev İnterneti</a></div>
+      <div><h4>Ürünler</h4><a href="#">Superbox 5G</a><a href="#">Fiber İnternet</a><a href="#">Mobil Tarifeler</a><a href="#">TV+</a><a href="#">Pasaj</a></div>
+      <div><h4>Destek</h4><a href="#">Yardım</a><a href="#">Online İşlemler</a><a href="#">Bayi Bul</a><a href="#">İletişim</a></div>
+    </div>
+    <div class="fbar"><span>© 2026 Turkcell · Tasarım örneği (demo) · Inbound</span><span>Hız Testi LP · CRO/dönüşüm varyantları</span></div>
+  </div>
+</footer>
+
+<!-- ============ YÜZEN VARYANT SEÇİCİ ============ -->
+<div class="vpick" id="vpick">
+  <div class="h">Varyant</div>
+  <button class="vbtn" data-v="a"><span class="k">A</span>Akıllı Sonuç<small>sonuç-tetikli paket önerisi</small></button>
+  <button class="vbtn" data-v="b"><span class="k">B</span>Sade Hız<small>tek net sonuç + CTA</small></button>
+  <button class="vbtn" data-v="c"><span class="k">C</span>Değer / Paket<small>karşılaştırma + fiyat</small></button>
+  <button class="vbtn" data-v="d"><span class="k">D</span>Lead / Altyapı<small>form ile lead toplama</small></button>
+  <div class="hint">#v=a · localStorage</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
