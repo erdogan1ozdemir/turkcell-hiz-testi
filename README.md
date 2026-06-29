@@ -4,12 +4,12 @@ Hedef sayfa **[turkcell.com.tr/hiz-testi](https://www.turkcell.com.tr/hiz-testi)
 sorgularda (**hız testi 1,57M · speedtest 1,28M · internet hız testi 844K · speed test 478K**) 1. sıraya çıkmayı
 ve sayfayı **dönüşüm/lead** kanalına çevirmeyi hedefleyen danışmanlık paketi.
 
-`hedef-lp-rapor-tasarim` skill'i ile üretilmiştir. Önceki iki çalışma (5G optimizasyon PDF'i + SSS Excel'i)
+Inbound tarafından hazırlanmıştır. Önceki iki çalışma (5G optimizasyon PDF'i + SSS Excel'i)
 dikkate alınmış, durumları madde madde işaretlenmiştir.
 
 ## Yayın (Vercel + Railway uyumlu)
 - **Rapor:** https://turkcell-hiz-testi.vercel.app/ (kök `index.html`)
-- **Tasarım örneği:** https://turkcell-hiz-testi.vercel.app/demo (`#v=a|b|c|d` ile varyant)
+- **Tasarım örneği:** https://turkcell-hiz-testi.vercel.app/demo (`#v=a..e` ile varyant)
 - **Vercel:** statik servis (`vercel.json` · cleanUrls). **Railway/Render:** `npm start` → `server.js` (`PORT` dinler).
 - Demo **tek dosya self-contained**'dır (CSS/JS/logo inline) → hiçbir host'ta stil bozulmaz.
 
@@ -17,7 +17,7 @@ dikkate alınmış, durumları madde madde işaretlenmiştir.
 | Yol | İçerik |
 |---|---|
 | [`index.html`](index.html) | SEO + GEO + rakip analizi + CRO HTML raporu (14 bölüm, Turkcell marka renkleri, grafikler, ekran görüntüleri) · **kökte yayınlanır** |
-| [`demo/`](demo/index.html) | Hedef sayfa klon kabuğu + **4 CRO/dönüşüm varyantı** + yüzen varyant seçici (canlı demo test) · **/demo'da yayınlanır** |
+| [`demo/`](demo/index.html) | Hedef sayfa klon kabuğu + **5 CRO/dönüşüm varyantı** + yüzen varyant seçici (canlı demo test) · **/demo'da yayınlanır** |
 | `assets/screenshots/` | Rapordaki ekran görüntüleri |
 | `data/` | Ham bulgular (keyword, SERP, sayfa denetimi, rakip distilasyonu) · kanıt |
 | `vercel.json` | cleanUrls ayarı |
@@ -27,7 +27,7 @@ dikkate alınmış, durumları madde madde işaretlenmiştir.
 ```bash
 python3 -m http.server 8842
 # Rapor:   http://localhost:8842/                (index.html)
-# Tasarım: http://localhost:8842/demo/index.html  (#v=a|b|c|d ile varyant)
+# Tasarım: http://localhost:8842/demo/index.html  (#v=a..e ile varyant)
 ```
 
 ## Öneri işaretleme sistemi
@@ -40,9 +40,12 @@ python3 -m http.server 8842
 
 ## Tasarım varyantları
 - **A · Akıllı Sonuç** · sonuç-tetikli dinamik paket önerisi
-- **B · Sade Hız** · tek net sonuç + tek güçlü CTA
+- **B · Hız Karnesi** · download/upload/ping karne kartları + güven şeridi + tek CTA
 - **C · Değer / Paket** · karşılaştırma + net fiyatlı paket kartları
 - **D · Lead / Altyapı** · adres/altyapı + telefon ile lead toplama
+- **E · Paket Köprüsü** · sonuç → Turkcell One Plus upsell (paket karoseli)
+
+Ek bileşenler: canlıdaki iki "Neler Var" kart bölümü (Ev İnterneti + Turkcell · on-domain iç bağlantı hub'ı), Turkcell One paket karoseli + geniş ekran yan ray CTA'ları (One Plus + 5G), nabız animasyonlu "Test tamamlandı" rozeti, interaktif SSS akordeonu, gradient arkaplan.
 
 ---
 Veri: Ahrefs + DataForSEO + Playwright · Gözlem: 26 Haziran 2026 · Hazırlayan: Inbound
