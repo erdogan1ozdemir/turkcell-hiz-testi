@@ -589,8 +589,40 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           </ul>
         </div>
       </div>
+      <h3>Tasarım örneğindeki bileşenler ve sayfada yerleşimi</h3>
+      <p>Tasarım örneğinde uygulanan başlıca bileşenler, sayfada yukarıdan aşağıya şu sırayla konumlandırılmalıdır. Yerleşim, kullanıcının "test et → sonucu gör → aksiyon al" akışını izler.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Bileşen</th><th>Sayfada yeri</th><th>Amaç</th></tr></thead>
+        <tbody>
+          <tr><td>Test aracı + test öncesi ipuçları</td><td>Hero (en üst)</td><td>İlk saniyede sürtünmesiz ölçüm</td></tr>
+          <tr><td>Sonuç-tetikli paket önerisi (akıllı sonuç)</td><td>Test biter bitmez, aracın hemen altında</td><td>Dönüşüm anını yakalama</td></tr>
+          <tr><td>Hız-ihtiyaç ve indirme süresi tabloları</td><td>Sonuç bloğunun altında</td><td>"Kaç Mbps?" sorusunu paketle eşleme</td></tr>
+          <tr><td>İçerik (rehber) + SSS</td><td>Tabloların altında</td><td>SEO derinliği, alıntılanabilirlik</td></tr>
+          <tr><td><b>"Turkcell'de neler var?" on-domain kart hub'ı</b></td><td>SSS'ten önce veya footer üstü</td><td>İç bağlantı + equity'yi Turkcell'de tutma</td></tr>
+        </tbody>
+      </table></div>
+      <h3>"Turkcell'de neler var?" kart hub'ı ve eklenebilecek karoseller</h3>
+      <p>Tasarım örneğindeki kart hub'ı, bugün superonline.net'e giden bağlantıları Turkcell içinde tutan bir iç bağlantı bileşenidir (Altyapı Sorgulama, Ping Testi, IP Sorgulama, Superbox 5G, Ev İnterneti, Fiber İnternet, Mobil Tarifeler, Pasaj). İkonlu, hover'da vurgulanan kartlarla görsel olarak güçlendirildi. Sayfaya değer katacak ek karosel/şerit önerileri:</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="margin-top:0">Dönüşüm odaklı karoseller</h3>
+          <ul class="clean">
+            <li><b>Sonuç-tetikli paket karoseli:</b> ölçülen hıza göre 2-3 paketi yan yana, "sana önerilen" rozetli. <span class="src src-plus">+★</span></li>
+            <li><b>"Hızını yükselt" karşılaştırma şeridi:</b> mevcut hız vs Turkcell Fiber 1000, net fiyatla. <span class="src src-new">Yeni</span></li>
+            <li><b>Kampanya bandı:</b> net fiyatlı, süreli kampanya kartı (Türk Telekom netliği + Vodafone fiyat şeffaflığı). <span class="src src-new">Yeni</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">İçerik ve araç karoselleri</h3>
+          <ul class="clean">
+            <li><b>İlgili araçlar karoseli:</b> Ping Testi, IP Sorgulama, Altyapı Sorgulama (on-domain araç hub'ı). <span class="src src-new">Yeni</span></li>
+            <li><b>İlgili rehber içerikleri:</b> "internet neden yavaş", "ideal hız kaç olmalı" gibi blog/rehber kartları (konu kümesi + iç bağlantı). <span class="src src-new">Yeni</span></li>
+            <li><b>5G / Superbox karoseli:</b> mobil ve kurulumsuz internet vaadi (Turkcell'in güçlü alanı). <span class="src src-plus">+★</span></li>
+          </ul>
+        </div>
+      </div>
       <div class="btnrow"><a class="btn btn-y" href="demo/">Tasarım örneğini aç · 4 varyant</a></div>
-      <p class="small muted">Tasarım örneği, sayfanın üst menü ve footer yapısını koruyup gövdeyi 4 dönüşüm yaklaşımıyla yeniden kurar: A · Akıllı Sonuç, B · Sade Hız, C · Değer/Paket, D · Lead/Altyapı.</p>
+      <p class="small muted">Tasarım örneği, sayfanın üst menü ve footer yapısını koruyup gövdeyi 4 dönüşüm yaklaşımıyla yeniden kurar: A · Akıllı Sonuç, B · Sade Hız, C · Değer/Paket, D · Lead/Altyapı. Kart hub'ı, footer iç bağlantı menüsü ve interaktif SSS bileşenleri de örnekte uygulanmıştır.</p>
     </section>
 
     <!-- 11 TEKNIK -->
@@ -664,8 +696,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
     <section class="section" id="brief">
       <div class="eyebrow">İçerik Yazım Brief'i</div>
       <h2>Uygulamaya hazır içerik brief'i</h2>
-      <p>Bu brief, içerik ekibinin doğrudan yazıma geçebilmesi için hazırlanmıştır: sayfa başlığı, başlık hiyerarşisi, hangi kelimelerin nerede ve ne sıklıkla geçeceği, hangi tabloların ve SSS'lerin yer alacağı, özet ve giriş içeriği. Her bölüm ilgili Inbound SEO skill'leri ile üretilip genişletilebilir.</p>
-      <div class="callout callout--info"><b>Brief'i üreten/genişleten skill'ler:</b> <span class="codei">seo-meta-writer</span> (başlık/meta), <span class="codei">seo-content</span> (metin ve E-E-A-T), <span class="codei">seo-geo</span> (alıntılanabilir pasaj), <span class="codei">seo-schema</span> (JSON-LD), <span class="codei">seo-cluster</span> (konu kümesi ve iç bağlantı), <span class="codei">youtube-content-research</span> (video tabanlı SSS).</div>
+      <p>Bu brief, içerik ekibinin doğrudan yazıma geçebilmesi için hazırlanmıştır: sayfa başlığı, başlık hiyerarşisi, hangi kelimelerin nerede ve ne sıklıkla geçeceği, hangi tabloların ve SSS'lerin yer alacağı, özet ve giriş içeriği. Hedef kelimeler; ana hacim, rakip boşluğu ve uzun kuyruk (long-tail) olmak üzere üç katmanda verilmiştir.</p>
 
       <h3>1. Başlık ve meta</h3>
       <div class="rec"><div class="rec__body">
@@ -673,22 +704,24 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           <dt>Başlık (title)</dt><dd>İnternet Hız Testi, Speed Test &amp; Ping | Turkcell (≤ 60 karakter; "Superonline" kuyruğu kaldırılır)</dd>
           <dt>Meta açıklama</dt><dd>Turkcell hız testi ile internet indirme, yükleme ve ping değerini saniyeler içinde ölç. Sonuca göre sana en uygun Turkcell internetini keşfet. (≤ 155 karakter)</dd>
           <dt>H1</dt><dd>İnternet Hızını Saniyeler İçinde Ölç</dd>
-          <dt>Birincil kelimeler</dt><dd>hız testi, internet hız testi, speed test, speedtest</dd>
-          <dt>İkincil kelimeler</dt><dd>internet hızı ölçme, internet speed test, adsl hız testi, wifi hız testi, mbps test, fast test, ping testi, 5g hız testi</dd>
+          <dt>Birincil kelimeler <span class="small muted">(ana hacim)</span></dt><dd>hız testi (1,57M) · speedtest (1,28M) · internet hız testi (844K) · speed test (478K)</dd>
+          <dt>Rakip boşluğu kelimeleri <span class="small muted">(rakipte var, Turkcell'de zayıf/yok)</span></dt><dd>internet speed test (68K) · fast test (25K) · adsl hız testi (12-16K) · internet hızı (41K) · internet hız (15K) · internet test (16K) · internet hızı ölçme (7,6K) · mbps test (4K). <span class="small muted">Tümünde Türk Telekom üst sırada; bu kelimeler içerik + başlık + SSS ile kapatılabilir.</span></dd>
+          <dt>Uzun kuyruk kelimeler <span class="small muted">(long-tail)</span></dt><dd>internet hızı kaç olmalı · 5g hız testi · wifi hız testi · fiber hız testi · ping nedir · jitter nedir · packet loss nedir · mbps nedir · download upload nedir · internet hızı nasıl artırılır · internet neden yavaş · mobil hız testi · 4.5g hız testi</dd>
         </dl>
       </div></div>
 
       <h3>2. Başlık hiyerarşisi (içerik planı)</h3>
       <div class="table-wrap"><table>
-        <thead><tr><th>Başlık</th><th>Altında ne olmalı</th><th>Hedef kelime</th></tr></thead>
+        <thead><tr><th>Başlık</th><th>Altında ne olmalı (detay)</th><th>Hedef + uzun kuyruk kelimeler</th></tr></thead>
         <tbody>
-          <tr><td>H1 · İnternet Hızını Saniyeler İçinde Ölç</td><td>Gömülü test aracı, "test öncesi ipuçları", sonuç sonrası akıllı paket önerisi</td><td>hız testi, speed test</td></tr>
-          <tr><td>H2 · İnternet Hız Testi (Speed Test) Nedir?</td><td>40-60 kelimelik alıntılanabilir tanım (AI Overview hedefi)</td><td>internet hız testi, speedtest</td></tr>
-          <tr><td>H2 · İnternet Hızı Nasıl Ölçülür?</td><td>Adım adım anlatım + HowTo şeması</td><td>internet hızı ölçme, internet hızı</td></tr>
-          <tr><td>H2 · Hangi Hız Hangi Kullanıma Yeter?</td><td>Hız-ihtiyaç eşleme tablosu + indirme süresi tablosu; her satır ilgili pakete bağlanır</td><td>internet hızı kaç olmalı, mbps</td></tr>
-          <tr><td>H2 · ADSL, Fiber ve Wi-Fi Hız Testi</td><td>Bağlantı türüne göre farklar; ADSL'e özel paragraf</td><td>adsl hız testi, wifi hız testi, fiber hız testi</td></tr>
-          <tr><td>H2 · Mobil ve 5G Hız Testi</td><td>Mobilde doğru ölçüm + 5G değer vaadi + 5G CTA</td><td>5g hız testi, mobil hız testi</td></tr>
-          <tr><td>H2 · Sıkça Sorulan Sorular</td><td>Mevcut 37 SSS + eklenecekler (FAQPage şeması)</td><td>long-tail SSS</td></tr>
+          <tr><td>H1 · İnternet Hızını Saniyeler İçinde Ölç</td><td>Gömülü test aracı; "test öncesi ipuçları" (diğer cihazları kes, Ethernet, indirmeleri durdur); test bitince sonuç-tetikli akıllı paket önerisi. İlk ekranda araç + tek satır değer vaadi.</td><td><b>hız testi</b>, speed test, hız testi yap, internet hızı testi</td></tr>
+          <tr><td>H2 · İnternet Hız Testi (Speed Test) Nedir?</td><td>40-60 kelimelik, tek paragraf, alıntılanabilir tanım (AI Overview / bilgi kutusu hedefi). "internet hız testi …dır" kalıbıyla başla.</td><td><b>internet hız testi</b>, speedtest, speed test nedir, internet speed test</td></tr>
+          <tr><td>H2 · İnternet Hızı Nasıl Ölçülür?</td><td>Numaralı adım adım anlatım + HowTo şeması. "indirme/yükleme/ping nasıl ölçülür" alt paragrafları. Rakip boşluğu: Türk Telekom bu kelimede #1, Turkcell #5.</td><td><b>internet hızı ölçme</b>, internet hızı nasıl ölçülür, internet indirme hızı ölçme, internet hat hızı öğrenme</td></tr>
+          <tr><td>H2 · İnternet Hız Testinde Metrikler</td><td>Download, upload, ping, jitter, packet loss, Mbps için kısa tanım + ideal değer; her terim tek cümlede alıntılanabilir olsun.</td><td>ping nedir, jitter nedir, packet loss nedir, mbps nedir, download upload nedir</td></tr>
+          <tr><td>H2 · Hangi Hız Hangi Kullanıma Yeter?</td><td>Hız-ihtiyaç eşleme tablosu + 10 GB indirme süresi tablosu; her satır ilgili Turkcell paketine bağlanır. "kaç Mbps olmalı" sorgularını karşılar, dönüşüme köprü.</td><td><b>internet hızı kaç olmalı</b>, ideal internet hızı, kaç mbps olmalı, download upload hızı kaç olmalı</td></tr>
+          <tr><td>H2 · ADSL, Fiber ve Wi-Fi Hız Testi</td><td>Bağlantı türüne göre farklar; ADSL'e özel paragraf (rakip boşluğu: adsl hız testi 12-16K, Türk Telekom #2, Turkcell yok). Wi-Fi vs kablolu ölçüm farkı.</td><td><b>adsl hız testi</b>, wifi hız testi, fiber hız testi, adsl fiber farkı</td></tr>
+          <tr><td>H2 · Mobil ve 5G Hız Testi</td><td>Mobilde doğru ölçüm + 5G değer vaadi + 5G CTA. Turkcell'in en güçlü olduğu ama sayfada en az işlenen alan (aramaların %76-96'sı mobil).</td><td><b>5g hız testi</b>, mobil hız testi, 4.5g hız testi, telefon hız testi</td></tr>
+          <tr><td>H2 · Sıkça Sorulan Sorular</td><td>Mevcut 37 SSS korunur + 5G/ADSL/uzun kuyruk eklenir (FAQPage şeması). Aşağıdaki "Eklenecek SSS" listesine bakın.</td><td>uzun kuyruk SSS (long-tail)</td></tr>
         </tbody>
       </table></div>
 
@@ -750,7 +783,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         <div class="rec"><div class="rec__head"><span class="prio prio-p2">P2</span><span class="src src-new">Yeni</span><span class="ttl">Breadcrumb ve ping/ip araç sayfaları</span></div><div class="rec__body">Breadcrumb + BreadcrumbList şeması; "ping testi" (KD 1) ve "ip sorgulama" için site içi araç sayfaları, hız testiyle karşılıklı bağlantı.</div></div>
       </div>
       <div class="tab-panel" id="t-icerik">
-        <div class="rec"><div class="rec__head"><span class="prio prio-p2">P2</span><span class="src src-done">✓ Uygulandı</span><span class="ttl">Çekirdek ve rakip SSS'leri</span></div><div class="rec__body">Excel'de önerilen Download/Upload, "Hız Testi Ücretli mi?", "Wi-Fi ile Hız Testi" ve çekirdek sorular artık canlıda (37 maddelik SSS). Ek aksiyon gerekmez.</div></div>
+        <div class="rec"><div class="rec__head"><span class="prio prio-p2">P2</span><span class="src src-done">✓ Uygulandı</span><span class="ttl">Temel ve rakip SSS'leri</span></div><div class="rec__body">Excel'de önerilen Download/Upload, "Hız Testi Ücretli mi?", "Wi-Fi ile Hız Testi" ve temel sorular artık canlıda (37 maddelik SSS, canlıda doğrulandı). Ek aksiyon gerekmez.</div></div>
         <div class="rec"><div class="rec__head"><span class="prio prio-p1">P1</span><span class="src src-new">Yeni</span><span class="ttl">Boşluk kelimelerini içerikle kapat</span></div><div class="rec__body">"internet hızı ölçme", "adsl hız testi", "internet speed test", "mbps test" için Bölüm 12'deki H2 başlıklarını ekle. Rakipler bu kelimelerde Turkcell'in önünde (Bölüm 06).</div></div>
         <div class="rec"><div class="rec__head"><span class="prio prio-p1">P1</span><span class="src src-new">Yeni</span><span class="ttl">Hız-ihtiyaç ve indirme süresi tabloları</span></div><div class="rec__body">Türk Telekom, Vodafone ve TurkNet'te var, Turkcell'de yok. Her satır ilgili Turkcell pakete bağlanır (bilgiden dönüşüme köprü).</div></div>
         <div class="rec"><div class="rec__head"><span class="prio prio-p1">P1</span><span class="src src-plus">+★</span><span class="ttl">5G/mobil içerik bloğu ve 5G SSS'leri</span></div><div class="rec__body">PDF ve Excel'deki 5G önerilerinin geliştirilmiş hali: bağımsız "Mobil ve 5G Hız Testi" bölümü + 5G SSS kümesi. "5g hız testi" AI Overview hedefi.</div></div>
@@ -780,7 +813,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
     <section class="section" id="onceki">
       <div class="eyebrow">Önceki Çalışmaların Durumu</div>
       <h2>İletilen iki çalışmanın güncel durumu</h2>
-      <p class="small muted">Önceden iletilenler ★, geliştirilmiş haller +★, canlı sayfada uygulanmış olanlar ✓ ile işaretlendi.</p>
+      <p class="small muted">Önceden iletilenler ★, geliştirilmiş haller +★, canlı sayfada uygulanmış olanlar ✓ ile işaretlendi. Tüm durumlar <b>canlı turkcell.com.tr/hiz-testi sayfası</b> üzerinde tek tek doğrulandı (gözlem 26-29 Haziran 2026): sayfada toplam <b>37 SSS</b> tespit edildi; aşağıdaki "uygulandı" maddeleri bu 37 SSS içinde bulunmaktadır, "uygulanmamış" maddeler sayfada yer almamaktadır.</p>
       <h3>Çalışma 1 · PDF "5G Optimizasyon Önerileri"</h3>
       <div class="table-wrap"><table>
         <thead><tr><th>Öneri</th><th>Durum</th><th>Bu rapordaki karşılığı</th></tr></thead>
@@ -798,13 +831,13 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
       <div class="table-wrap"><table>
         <thead><tr><th>Grup</th><th>Durum</th><th>Bu rapordaki karşılığı</th></tr></thead>
         <tbody>
-          <tr><td>Çekirdek SSS (Mbps, Packet Loss, Nasıl Yapılır)</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td><span class="src src-done">✓</span> doğrulandı</td></tr>
-          <tr><td>Rakip SSS (Download/Upload, Ücretli mi, Wi-Fi)</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td><span class="src src-done">✓</span> doğrulandı</td></tr>
-          <tr><td>Uzun kuyruk mobil SSS (16 soru, ~12 eksik)</td><td><span class="pill p-amber">Kısmen</span></td><td><span class="src src-star">★</span> İçerik</td></tr>
-          <tr><td>5G SSS'leri</td><td><span class="pill p-bad">Uygulanmamış</span></td><td><span class="src src-plus">+★</span> 5G içerik bloğu</td></tr>
+          <tr><td>Temel SSS (Mbps, Packet Loss, Jitter, Nasıl Yapılır)</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td><span class="src src-done">✓</span> canlıda doğrulandı</td></tr>
+          <tr><td>Rakip SSS (Download/Upload, Ücretli mi, Wi-Fi, Güvenilir mi)</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td><span class="src src-done">✓</span> canlıda doğrulandı</td></tr>
+          <tr><td>Uzun kuyruk mobil SSS (eski SIM, çip seti, baz istasyonu, Carrier Aggregation vb.)</td><td><span class="pill p-bad">Yok</span></td><td><span class="src src-star">★</span> İçerik · canlıda bulunmuyor</td></tr>
+          <tr><td>5G ve ADSL SSS'leri</td><td><span class="pill p-bad">Yok</span></td><td><span class="src src-plus">+★</span> 5G içerik bloğu · canlıda bulunmuyor</td></tr>
         </tbody>
       </table></div>
-      <div class="insight"><span class="lead-in">Özet</span>Excel'in çekirdek ve rakip SSS önerileri uygulanmış. PDF'in 5G ve dönüşüm önerilerinin neredeyse tamamı açık. En yüksek kazanç, açık kalan 5G, dönüşüm ve şema önerilerinde.</div>
+      <div class="insight"><span class="lead-in">Özet</span>Excel'in temel ve rakip SSS önerileri canlıda uygulanmış (37 SSS içinde doğrulandı). PDF'in 5G ve dönüşüm önerilerinin neredeyse tamamı açık; 5G ve ADSL SSS'leri ile uzun kuyruk mobil sorular sayfada bulunmuyor. En yüksek kazanç, açık kalan 5G, dönüşüm ve şema önerilerinde.</div>
     </section>
 
     <!-- 15 YOL -->
