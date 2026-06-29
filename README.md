@@ -43,9 +43,9 @@ python3 -m http.server 8842
 - **B · Hız Karnesi** · download/upload/ping karne kartları + güven şeridi + tek CTA
 - **C · Değer / Paket** · karşılaştırma + net fiyatlı paket kartları
 - **D · Lead / Altyapı** · adres/altyapı + telefon ile lead toplama
-- **E · Paket Köprüsü** · sonuç → Turkcell One Plus upsell (paket karoseli)
+- **E · Sana Uygun Paketler** · sonuç → 4 gerçek pakete köprü: Turkcell One Premium · 5G Ultra Platinum 60 GB · Superbox 5G 500 GB · Superonline Fiber 100
 
-Ek bileşenler: canlıdaki iki "Neler Var" kart bölümü (Ev İnterneti + Turkcell · on-domain iç bağlantı hub'ı), Turkcell One paket karoseli + geniş ekran yan ray CTA'ları (One Plus + 5G), nabız animasyonlu "Test tamamlandı" rozeti, interaktif SSS akordeonu, gradient arkaplan.
+Ek bileşenler: canlıdaki iki "Neler Var" kart bölümü (Ev İnterneti + Turkcell · on-domain iç bağlantı hub'ı), "Sana uygun Turkcell paketleri" karoseli (4 paket), varyanta göre şekillenen yan ray paket kartları (geniş ekranda solda, mobilde inline · One + ikinci paket), nabız animasyonlu "Test tamamlandı" rozeti, border-beam ışıklı CTA butonları, interaktif SSS akordeonu, gradient arkaplan.
 
 ---
 Veri: Ahrefs + DataForSEO + Playwright · Gözlem: 26 Haziran 2026 · Hazırlayan: Inbound

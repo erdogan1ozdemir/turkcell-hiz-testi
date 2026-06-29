@@ -598,20 +598,49 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           </ul>
         </div>
       </div>
+
+      <h3>Tasarım örneğinin son hali · 5 dönüşüm varyantı</h3>
+      <p>Test bittiğinde, seçili varyanta göre aracın hemen altında farklı bir dönüşüm modülü canlanır. Beş varyant, aynı sayfanın beş dönüşüm yaklaşımını gösterir:</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Varyant</th><th>Sonuç modülü (ne gösterir)</th><th>Birincil aksiyon</th></tr></thead>
+        <tbody>
+          <tr><td><b>A · Akıllı Sonuç</b></td><td>Ölçülen hıza göre dinamik paket önerisi + 3 paket kartı ("sana önerilen" rozetli)</td><td>Hemen başvur</td></tr>
+          <tr><td><b>B · Hız Karnesi</b></td><td>Download / upload / ping skor kartları + "bu hız neye yeter" yorumu + güven şeridi (Ookla · Turkcell sunucusu · KVKK)</td><td>Hızını yükselt</td></tr>
+          <tr><td><b>C · Değer / Paket</b></td><td>Mevcut hız vs Turkcell Fiber karşılaştırması + net fiyatlı paket kartları</td><td>Hemen başvur</td></tr>
+          <tr><td><b>D · Lead / Altyapı</b></td><td>Ad-telefon + adres/altyapı sorgulama formu (tekrarlı lead akışı)</td><td>Seni arayalım / Altyapımı sorgula</td></tr>
+          <tr><td><b>E · Sana Uygun Paketler</b></td><td>Sonucu 4 gerçek pakete bağlar: Turkcell One Premium · 5G Ultra Platinum 60 GB · Superbox 5G 500 GB · Superonline Fiber 100</td><td>İncele / Paketi seç / Başvur</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>Her varyantta ortak bileşenler</h3>
+      <ul class="clean">
+        <li><b>Canlı klonu:</b> üst menü, breadcrumb, hero test aracı ve footer canlı sayfayla bire bir; Turkcell marka renkleri ve logosu. Sonuç paneli başında "Testin bitti, sana en uygun hızı bulalım" CTA'sı.</li>
+        <li><b>İki "Neler Var" kart bölümü:</b> (1) "Turkcell Ev İnterneti'nde Neler Var?" (mavi kartlar; büyük Superbox kartı + 8 araç/kampanya), (2) "Turkcell'de Neler Var?" (lacivert kartlar; Pasaj, Yeni Hat, Numara Taşıma, TL/Paket, Ek Paket). Tüm bağlantılar turkcell.com.tr içinde (on-domain), canlıdaki ikon ve düzenle.</li>
+        <li><b>"Sana uygun Turkcell paketleri" karoseli:</b> akış içinde 4 paket (One Premium, 5G Ultra Platinum, Superbox 5G, Superonline Fiber); E varyantında sonuç modülü zaten paketleri gösterdiği için bu bölüm gizlenir.</li>
+        <li><b>Yan ray:</b> geniş ekranda solda yüzen, mobilde inline iki kart (One + ikinci paket). İçerik, rozet, CTA ve logolar <b>varyanta göre değişir</b> (ör. D'de "Ev İnterneti + One" + Superbox; C'de fiyat vurgulu One Premium + 5G Ultra Platinum).</li>
+        <li><b>Hız Testi Karşılaştırma Tabloları:</b> hız-ihtiyaç, indirme süresi ve metrik tabloları; her satır ilgili Turkcell pakete bağlı.</li>
+        <li><b>Mobil ve 5G bloğu:</b> "Mobilde 5G ile en yüksek hız için Turkcell'i tercih et" CTA + "5G'yi keşfet" ve "5G paketlerini incele" linkleri.</li>
+        <li><b>İçerik + interaktif SSS:</b> canlıdaki gövde içeriği (ilk paragraf görünür, "Devamını oku" ile açılır) + kümelenmiş, açılır-kapanır 45 maddelik SSS akordeonu.</li>
+        <li><b>Görsel kalite:</b> gradient arkaplan, nabız animasyonlu "Test tamamlandı" rozeti, çerçeve etrafında dönen ışık efektli (border-beam) CTA butonları, footer'da 4 kolonlu iç bağlantı menüsü.</li>
+      </ul>
+
       <h3>Tasarım örneğindeki bileşenler ve sayfada yerleşimi</h3>
       <p>Tasarım örneğinde uygulanan başlıca bileşenler, sayfada yukarıdan aşağıya şu sırayla konumlandırılmalıdır. Yerleşim, kullanıcının "test et → sonucu gör → aksiyon al" akışını izler.</p>
       <div class="table-wrap"><table>
         <thead><tr><th>Bileşen</th><th>Sayfada yeri</th><th>Amaç</th></tr></thead>
         <tbody>
           <tr><td>Test aracı + test öncesi ipuçları</td><td>Hero (en üst)</td><td>İlk saniyede sürtünmesiz ölçüm</td></tr>
-          <tr><td>Sonuç-tetikli paket önerisi (akıllı sonuç)</td><td>Test biter bitmez, aracın hemen altında</td><td>Dönüşüm anını yakalama</td></tr>
-          <tr><td>Hız-ihtiyaç ve indirme süresi tabloları</td><td>Sonuç bloğunun altında</td><td>"Kaç Mbps?" sorusunu paketle eşleme</td></tr>
-          <tr><td>İçerik (rehber) + SSS</td><td>Tabloların altında</td><td>SEO derinliği, alıntılanabilirlik</td></tr>
-          <tr><td><b>"Turkcell'de neler var?" on-domain kart hub'ı</b></td><td>SSS'ten önce veya footer üstü</td><td>İç bağlantı + equity'yi Turkcell'de tutma</td></tr>
+          <tr><td>Sonuç-tetikli dönüşüm modülü (varyant)</td><td>Test biter bitmez, aracın hemen altında</td><td>Dönüşüm anını yakalama</td></tr>
+          <tr><td>Yan ray paket kartları (One + ikinci paket)</td><td>Geniş ekranda solda yüzer; mobilde sonucun altında inline</td><td>Boş yan alandan ek dönüşüm</td></tr>
+          <tr><td>Hız Testi Karşılaştırma Tabloları</td><td>Sonuç bloğunun altında</td><td>"Kaç Mbps?" sorusunu paketle eşleme</td></tr>
+          <tr><td>"Sana uygun Turkcell paketleri" karoseli</td><td>Tabloların altında</td><td>One / 5G / ev interneti / fiber çapraz satışı</td></tr>
+          <tr><td>Mobil ve 5G bloğu + Superbox bandı</td><td>Paket karoselinin altında</td><td>5G / Superbox yönlendirmesi</td></tr>
+          <tr><td><b>İki "Neler Var" on-domain kart hub'ı</b></td><td>İçerikten önce</td><td>İç bağlantı + equity'yi Turkcell'de tutma</td></tr>
+          <tr><td>İçerik (rehber) + interaktif SSS</td><td>Kart hub'larının altında</td><td>SEO derinliği, alıntılanabilirlik</td></tr>
         </tbody>
       </table></div>
-      <h3>"Turkcell'de neler var?" kart hub'ı ve eklenebilecek karoseller</h3>
-      <p>Tasarım örneğindeki kart hub'ı, bugün superonline.net'e giden bağlantıları Turkcell içinde tutan bir iç bağlantı bileşenidir (Altyapı Sorgulama, Ping Testi, IP Sorgulama, Superbox 5G, Ev İnterneti, Fiber İnternet, Mobil Tarifeler, Pasaj). İkonlu, hover'da vurgulanan kartlarla görsel olarak güçlendirildi. Sayfaya değer katacak ek karosel/şerit önerileri:</p>
+      <h3>"Neler Var" kart hub'ları ve eklenebilecek karoseller</h3>
+      <p>Tasarım örneğinde, canlı sayfadaki iki "Neler Var" bölümü on-domain kart hub'ı olarak yeniden kuruldu: <b>"Turkcell Ev İnterneti'nde Neler Var?"</b> (Superbox, Ev İnterneti, Router, IP Sorgulama, Ping Testi vb.) ve <b>"Turkcell'de Neler Var?"</b> (Pasaj, Yeni Hat, Numara Taşıma, TL/Paket, Ek Paket). Böylece bugün superonline.net'e giden bağlantılar Turkcell içinde tutulur. İkonlu, hover'da vurgulanan kartlarla görsel olarak güçlendirildi. Bunların yanında sayfaya değer katabilecek ek karosel/şerit önerileri:</p>
       <div class="grid-2">
         <div class="card">
           <h3 style="margin-top:0">Dönüşüm odaklı karoseller</h3>
@@ -637,16 +666,16 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         <tbody>
           <tr><td>Sonuç-tetikli akıllı paket önerisi (Varyant A)</td><td>Test biter bitmez ölçülen hıza göre paket önerir, tek tıkla başvuru</td><td>Hiçbir rakipte yok; testten sonra net bir sonraki adım sunulmuyor</td><td>Test → başvuru dönüşümü; "en akıllı araç" algısı ve kategori liderliği</td></tr>
           <tr><td>Hız Karnesi (Varyant B)</td><td>Download/upload/ping skor kartları + "bu hız neye yeter" + güven şeridi (Ookla/Turkcell/KVKK)</td><td>Sade sonuç ekranını bilgilendirici ve güven verici hale getirir</td><td>Sayfada kalma süresi ve pakete tıklama oranı artışı</td></tr>
-          <tr><td>Paket Köprüsü (Varyant E) + "Sana Uygun Paketler" karoseli</td><td>Sonucu Turkcell One, 5G'li hat ve ev interneti paketlerine bağlar</td><td>Yüksek trafik (tahmini 496.000/ay) bugün dönüşüme bağlanmıyor</td><td>Çapraz satış; tek ziyaretten birden çok ürün fırsatı</td></tr>
+          <tr><td>Sana Uygun Paketler (Varyant E) + paket karoseli</td><td>Sonucu 4 gerçek pakete bağlar: Turkcell One Premium, 5G Ultra Platinum 60 GB, Superbox 5G 500 GB, Superonline Fiber 100</td><td>Yüksek trafik (tahmini 496.000/ay) bugün dönüşüme bağlanmıyor</td><td>Çapraz satış; tek ziyaretten birden çok ürün/yükseltme fırsatı</td></tr>
           <tr><td>İki "Neler Var" on-domain kart hub'ı (Ev İnterneti + Turkcell)</td><td>superonline.net yerine turkcell.com.tr araç/paket bağlantıları</td><td>Sayfa bugün equity'yi ayrı bir alan adına sızdırıyor (Bölüm 07)</td><td>İç bağlantı + otorite Turkcell'de kalır; URL Rating'i besler</td></tr>
-          <tr><td>Yan ray CTA'ları (One Plus + 5G)</td><td>Geniş ekranda boş sol/sağ alanlara paket yönlendirmesi</td><td>Sağ/sol boşluklar değerlendirilmiyor; varyanta göre içerik/logo değişir</td><td>Görünür alan başına ek dönüşüm teması</td></tr>
+          <tr><td>Yan ray paket kartları (One + ikinci paket)</td><td>Geniş ekranda solda yüzer, mobilde sonucun altında inline; rozet/başlık/CTA/logo ve ikinci kart varyanta göre değişir</td><td>Boş yan alan değerlendirilmiyor; her varyant farklı paket köprüsü kurar</td><td>Görünür alan başına ek dönüşüm teması</td></tr>
           <tr><td>Hız-ihtiyaç + indirme süresi tabloları</td><td>Her satır ilgili Turkcell pakete bağlanır</td><td>Rakiplerde (TT/Vodafone/TurkNet) var, Turkcell'de yok</td><td>"Kaç Mbps?" niyetini pakete köprüler; bilgi → dönüşüm</td></tr>
           <tr><td>Adres/altyapı lead akışı (Varyant D)</td><td>Numara + adres ile lead toplama formu</td><td>TurkNet modeli; sayfada bugün lead kanalı yok</td><td>Doğrudan lead/başvuru üretimi</td></tr>
           <tr><td>Premium "Test tamamlandı" rozeti + interaktif SSS</td><td>Nabız animasyonlu rozet, açılır-kapanır kümelenmiş SSS akordeonu</td><td>Görsel kalite ve okunabilirlik</td><td>Algılanan kalite ve SSS etkileşimi artışı</td></tr>
         </tbody>
       </table></div>
       <div class="btnrow"><a class="btn btn-y" href="demo/">Tasarım örneğini aç · 5 varyant</a></div>
-      <p class="small muted">Tasarım örneği, sayfanın üst menü ve footer yapısını koruyup gövdeyi 5 dönüşüm yaklaşımıyla yeniden kurar: A · Akıllı Sonuç, B · Hız Karnesi, C · Değer/Paket, D · Lead/Altyapı, E · Paket Köprüsü. Bileşenler varyanta göre farklılaşır (örn. yan ray karoselleri ve "Sana Uygun Paketler" içeriği her varyantta değişir).</p>
+      <p class="small muted">Tasarım örneği, sayfanın üst menü ve footer yapısını koruyup gövdeyi 5 dönüşüm yaklaşımıyla yeniden kurar: A · Akıllı Sonuç, B · Hız Karnesi, C · Değer/Paket, D · Lead/Altyapı, E · Sana Uygun Paketler. Bileşenler varyanta göre farklılaşır (örn. yan ray kartları ve "Sana Uygun Paketler" içeriği her varyantta değişir). Yukarıdaki açıklamalar tasarım örneğinin canlı son hâliyle birebir eşleşir.</p>
     </section>
 
     <!-- 09 TEKNIK -->
@@ -927,9 +956,9 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         </ul><p class="small muted">Türk Telekom'un içerik avantajını kapatır, AI Overview'a girer.</p></div>
         <div class="card"><h3 style="margin-top:0">Faz 3 · Dönüşüm</h3><ul class="clean">
           <li>Teste bağlı akıllı paket önerisi (sonuç-tetikli)</li>
-          <li>Net fiyatlı paket kartları + "Sana Uygun Paketler" karoseli (One / 5G hat / ev interneti)</li>
+          <li>Net fiyatlı paket kartları + "Sana Uygun Paketler" karoseli (One Premium / 5G Ultra Platinum / Superbox 5G / Superonline Fiber)</li>
           <li>Adres/altyapı lead akışı ve form</li>
-          <li>İki "Neler Var" on-domain kart hub'ı + geniş ekran yan ray CTA'ları</li>
+          <li>İki "Neler Var" on-domain kart hub'ı + varyanta göre şekillenen yan ray paket kartları (geniş ekranda solda, mobilde inline)</li>
           <li>ping ve ip araç sayfaları ile hız testi arasında karşılıklı bağlantı</li>
         </ul><p class="small muted">Sayfayı dönüşüm kanalına çevirir; tasarım örneğinde uygulandı.</p></div>
       </div>
