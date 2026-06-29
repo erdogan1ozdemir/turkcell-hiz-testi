@@ -27,7 +27,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 /* akıcı kök font: turkcell-one raporundaki okunabilirlik */
-html{scroll-behavior:smooth;overflow-x:clip;font-size:clamp(16px,0.45vw + 14.5px,18.5px)}
+html{scroll-behavior:smooth;overflow-x:clip;font-size:clamp(15px,0.45vw + 13.5px,17.5px)}
 body{font-family:var(--font);color:var(--ink);background:var(--bg);font-size:1rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{max-width:100%}
 a{color:var(--blue)}a:hover{text-decoration:underline}
@@ -55,13 +55,13 @@ main{min-width:0;max-width:100%}
 /* ---- layout: sabit sol ToC + içerik ---- */
 .layout{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:236px 1fr;gap:24px;padding:24px 22px 90px;align-items:start}
 .sidenav{position:sticky;top:74px;align-self:start;max-height:calc(100vh - 92px);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r-lg);padding:13px;box-shadow:var(--shadow-h);z-index:1}
-.sidenav h4{flex:none;font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:2px 8px 9px}
+.sidenav h4{flex:none;font-size:.705rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:2px 8px 9px}
 .toc-scroll{overflow-y:auto;min-height:0;display:flex;flex-direction:column;gap:1px;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
 .toc-scroll::-webkit-scrollbar{width:6px}.toc-scroll::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:6px}
-.sidenav a{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:10px;color:var(--ink-2);font-size:.82rem;font-weight:600}
-.sidenav a:hover{background:var(--surface-2);color:var(--navy);text-decoration:none}
+.sidenav a{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:10px;color:var(--ink-2);font-size:.875rem;font-weight:600;text-decoration:none;transition:transform .14s,background .14s,color .14s,box-shadow .14s}
+.sidenav a:hover{background:var(--surface-2);color:var(--navy);text-decoration:none;transform:translateX(4px);box-shadow:inset 3px 0 0 var(--yellow)}
 .sidenav a.active{background:var(--blue-soft);color:var(--navy)}
-.sidenav a .n{width:21px;height:21px;border-radius:6px;background:var(--surface-2);color:var(--ink-3);font-size:.62rem;font-weight:800;display:grid;place-items:center;flex:none}
+.sidenav a .n{width:21px;height:21px;border-radius:6px;background:var(--surface-2);color:var(--ink-3);font-size:.665rem;font-weight:800;display:grid;place-items:center;flex:none}
 .sidenav a.active .n{background:var(--yellow);color:var(--navy-deep)}
 
 /* ---- sections: belirgin çerçeve + gölge ---- */
@@ -222,9 +222,22 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
 .xls-btn{display:inline-flex;align-items:center;gap:8px;background:#1d6f42;color:#fff;font-weight:700;border:none;border-radius:10px;padding:10px 16px;font-size:.9rem;text-decoration:none;box-shadow:0 6px 18px rgba(29,111,66,.28);transition:.16s;margin:2px 0 14px}
 .xls-btn:hover{background:#175a36;transform:translateY(-1px)}
 .xls-btn svg{width:17px;height:17px;flex:none}
+/* revizyon 3: okuma ilerleme barı, kompakt yönetici özeti, tablo kaydırma ipucu, terim info ikonu */
+.readprog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue),var(--yellow));z-index:200;transition:width .08s linear;border-radius:0 2px 2px 0}
+.section.hero .lead{font-size:.95rem;line-height:1.5}
+.section.hero .lead-list li{font-size:.9rem;margin:5px 0;line-height:1.48}
+.table-wrap{position:relative}
+.scrollcue{position:absolute;top:7px;right:7px;z-index:3;display:none;align-items:center;gap:5px;background:var(--navy-deep);color:#fff;font-size:.7rem;font-weight:700;padding:5px 10px;border-radius:var(--r-pill);box-shadow:0 4px 14px rgba(0,0,0,.28);pointer-events:none;opacity:.95;transition:opacity .2s}
+.table-wrap.scrollable .scrollcue{display:inline-flex;animation:cueNudge 1.4s ease-in-out infinite}
+.table-wrap.scrolled-end .scrollcue{opacity:0}
+@keyframes cueNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+.term::after{content:"\24D8";font-size:.66em;color:var(--blue);margin-left:2px;vertical-align:super;font-weight:700;line-height:0}
+.term{position:relative}
+@media(max-width:720px){.term::after{font-size:.8em}}
 </style>
 </head>
 <body>
+<div class="readprog" id="readprog" aria-hidden="true"></div>
 
 <header class="appbar">
   <div class="appbar__in">
@@ -267,7 +280,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
     <section class="section hero" id="ozet">
       <div class="eyebrow">Yönetici Özeti</div>
       <h2>Hız Testi Query'lerinde 1. Sıra Hedefi ve Dönüşüm Planlaması</h2>
-      <p class="lead">Turkcell hız testi sayfası, ayda toplam 4,17 milyon arama alan dört ana keywordde ilk dörtte yer alıyor. Sayfa teknik olarak hızlı ve güçlü; 1. sıranın önündeki engeller içerik derinliği, sayfa otoritesi ve dönüşüm mimarisidir.</p>
+      <p class="lead">Turkcell hız testi sayfası, ayda toplam 4,17 milyon arama alan dört ana keywordde ilk dörtte yer alıyor. Sayfa teknik olarak hızlı ve güçlü; 1. sıra için yapılan incelemeler ve öncelikli olarak alınabilecek aksiyonlar aşağıdaki gibidir.</p>
       <ul class="clean lead-list">
         <li><b>Mevcut konum:</b> <b>speedtest</b>'te 2.; <b>hız testi</b>, <b>internet hız testi</b> ve <b>speed test</b>'te 4. sırada.</li>
         <li><b>1. sıranın önündeki üç engel:</b> (1) içerik derinliği (sayfa rakiplerin yarısı uzunlukta), (2) sayfa otoritesi (URL Rating 12; Türk Telekom 21), (3) dönüşüm mimarisi (net teklif veya sonuç-tetikli öneri yok).</li>
@@ -986,13 +999,33 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
 
 <script>
 (function(){
-  const tip=document.getElementById('termtip');
+  const tip=document.getElementById('termtip');let cur=null;
+  const hide=()=>{tip.classList.remove('show');cur=null;};
+  const show=el=>{cur=el;tip.textContent=el.getAttribute('data-term');const r=el.getBoundingClientRect();tip.style.left=Math.min(Math.max(8,r.left),window.innerWidth-tip.offsetWidth-8)+'px';tip.style.top=(r.top-tip.offsetHeight-10<8?r.bottom+10:r.top-tip.offsetHeight-10)+'px';tip.classList.add('show');};
   document.querySelectorAll('.term[data-term]').forEach(el=>{
-    const show=()=>{tip.textContent=el.getAttribute('data-term');const r=el.getBoundingClientRect();tip.style.left=Math.min(Math.max(8,r.left),window.innerWidth-tip.offsetWidth-8)+'px';tip.style.top=(r.top-tip.offsetHeight-10<8?r.bottom+10:r.top-tip.offsetHeight-10)+'px';tip.classList.add('show');};
-    el.addEventListener('mouseenter',show);el.addEventListener('click',show);
-    el.addEventListener('mouseleave',()=>tip.classList.remove('show'));
+    el.setAttribute('tabindex','0');el.setAttribute('role','button');
+    el.addEventListener('mouseenter',()=>show(el));
+    el.addEventListener('mouseleave',()=>{if(cur===el)hide();});
+    el.addEventListener('focus',()=>show(el));el.addEventListener('blur',hide);
+    el.addEventListener('click',e=>{e.stopPropagation();(cur===el)?hide():show(el);});
   });
-  document.addEventListener('scroll',()=>tip.classList.remove('show'),true);
+  document.addEventListener('click',e=>{if(!e.target.closest('.term'))hide();});
+  document.addEventListener('scroll',hide,true);
+  window.addEventListener('resize',hide);
+})();
+/* okuma ilerleme barı */
+(function(){
+  const bar=document.getElementById('readprog');if(!bar)return;
+  const upd=()=>{const h=document.documentElement;const max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';};
+  document.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+})();
+/* tablo yatay kaydırma ipucu (mobilde tabloya sığmazsa) */
+(function(){
+  document.querySelectorAll('.table-wrap').forEach(w=>{
+    const cue=document.createElement('span');cue.className='scrollcue';cue.innerHTML='kaydır →';w.appendChild(cue);
+    const upd=()=>{const sc=w.scrollWidth-w.clientWidth>4;w.classList.toggle('scrollable',sc);w.classList.toggle('scrolled-end',sc&&w.scrollLeft>=w.scrollWidth-w.clientWidth-4);};
+    w.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+  });
 })();
 (function(){
   const lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
