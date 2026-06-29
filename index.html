@@ -215,6 +215,13 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
   .toc-sheet.open{display:block !important}
 }
 @media(max-width:420px){.kpi-grid{grid-template-columns:1fr}.section h2{font-size:1.18rem}}
+/* revizyon 2: lead bullet list, kod bloğu, Excel export butonu */
+.lead-list{margin:14px 0 4px;padding-left:0}
+.lead-list li{margin:7px 0;line-height:1.55}
+.codeblock{background:var(--surface-3,#0e1630);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto;font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:.8rem;line-height:1.5;white-space:pre;color:var(--ink,#13235c)}
+.xls-btn{display:inline-flex;align-items:center;gap:8px;background:#1d6f42;color:#fff;font-weight:700;border:none;border-radius:10px;padding:10px 16px;font-size:.9rem;text-decoration:none;box-shadow:0 6px 18px rgba(29,111,66,.28);transition:.16s;margin:2px 0 14px}
+.xls-btn:hover{background:#175a36;transform:translateY(-1px)}
+.xls-btn svg{width:17px;height:17px;flex:none}
 </style>
 </head>
 <body>
@@ -239,20 +246,19 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
     <div class="toc-scroll">
       <a href="#ozet"><span class="n">01</span> Yönetici Özeti</a>
       <a href="#durum"><span class="n">02</span> Sayfanın Mevcut Durumu</a>
-      <a href="#serp"><span class="n">03</span> SERP &amp; Görünürlük</a>
+      <a href="#serp"><span class="n">03</span> Sıralamalar &amp; Odak Keywordler</a>
       <a href="#kelime"><span class="n">04</span> Kelime &amp; Talep Havuzu</a>
-      <a href="#gap"><span class="n">05</span> Rakip Boşluk Analizi</a>
+      <a href="#gap"><span class="n">05</span> Content Gap &amp; Rakip Karşılaştırması</a>
       <a href="#geo"><span class="n">06</span> AI Overview &amp; GEO</a>
-      <a href="#rakip"><span class="n">07</span> Rakip İçerik Karşılaştırması</a>
-      <a href="#linkler"><span class="n">08</span> Eski Linkler &amp; İç Yönlendirme</a>
-      <a href="#cro"><span class="n">09</span> CRO / Dönüşüm / Lead</a>
-      <a href="#teknik"><span class="n">10</span> Teknik, Hız &amp; fast.com</a>
-      <a href="#brief"><span class="n">11</span> İçerik Yazım Brief'i</a>
-      <a href="#aksiyon"><span class="n">12</span> Aksiyon Planı</a>
-      <a href="#onceki"><span class="n">13</span> Önceki Çalışmaların Durumu</a>
-      <a href="#yol"><span class="n">14</span> Öncelik &amp; Yol Haritası</a>
-      <a href="#yontem"><span class="n">15</span> Yöntem &amp; Kapsam</a>
-      <a href="#sozluk"><span class="n">16</span> Terim Sözlüğü &amp; Kaynaklar</a>
+      <a href="#linkler"><span class="n">07</span> Eski Linkler &amp; İç Yönlendirme</a>
+      <a href="#cro"><span class="n">08</span> CRO / Dönüşüm / Lead</a>
+      <a href="#teknik"><span class="n">09</span> Teknik &amp; On-Page SEO</a>
+      <a href="#brief"><span class="n">10</span> İçerik Brief'i</a>
+      <a href="#aksiyon"><span class="n">11</span> Aksiyon Planı</a>
+      <a href="#onceki"><span class="n">12</span> Önceki Çalışmaların Durumu</a>
+      <a href="#yol"><span class="n">13</span> Öncelik Sırası</a>
+      <a href="#yontem"><span class="n">14</span> Data Kaynakları</a>
+      <a href="#sozluk"><span class="n">15</span> Terim Sözlüğü</a>
     </div>
   </nav>
 
@@ -260,8 +266,15 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
     <!-- 01 -->
     <section class="section hero" id="ozet">
       <div class="eyebrow">Yönetici Özeti</div>
-      <h2>En yüksek hacimli sorgularda 1. sıraya çıkmak ve sayfayı dönüşüm kanalına dönüştürmek</h2>
-      <p class="lead">Turkcell hız testi sayfası, ayda toplam 4,17 milyon arama alan dört ana sorguda ilk dörtte yer alıyor: <b>speedtest</b>'te 2., <b>hız testi</b>, <b>internet hız testi</b> ve <b>speed test</b>'te 4. sırada. Sayfa hızlı ve güçlü; 1. sıranın önündeki üç engel içerik derinliği, sayfa otoritesi (URL Rating) ve dönüşüm mimarisidir. Bu rapor, rakip boşluk analizi ve uygulamaya hazır içerik brief'i ile bu üç alanı kapatır.</p>
+      <h2>En yüksek hacimli keywordlerde 1. sıraya çıkmak ve sayfayı dönüşüm kanalına dönüştürmek</h2>
+      <p class="lead">Turkcell hız testi sayfası, ayda toplam 4,17 milyon arama alan dört ana keywordde ilk dörtte yer alıyor. Sayfa teknik olarak hızlı ve güçlü; 1. sıranın önündeki engeller içerik derinliği, sayfa otoritesi ve dönüşüm mimarisidir.</p>
+      <ul class="clean lead-list">
+        <li><b>Mevcut konum:</b> <b>speedtest</b>'te 2.; <b>hız testi</b>, <b>internet hız testi</b> ve <b>speed test</b>'te 4. sırada.</li>
+        <li><b>1. sıranın önündeki üç engel:</b> (1) içerik derinliği (sayfa rakiplerin yarısı uzunlukta), (2) sayfa otoritesi (URL Rating 12; Türk Telekom 21), (3) dönüşüm mimarisi (net teklif veya sonuç-tetikli öneri yok).</li>
+        <li><b>Bu rapor ne içeriyor:</b> doğrulanmış sıralama ve keyword analizi, content gap ve rakip içerik karşılaştırması, AI/GEO ve şema yol haritası, teknik &amp; on-page denetim, uygulamaya hazır içerik brief'i ve önceki çalışmaların güncel durumu.</li>
+        <li><b>Rakip sayfaları detaylı incelendi:</b> başta 1. sıradaki Türk Telekom ve aynı tarz hizmet veren Vodafone olmak üzere rakiplerin hız testi sayfaları içerik, dönüşüm ve keyword yoğunluğu düzeyinde tek tek karşılaştırıldı.</li>
+        <li><b>Ek olarak teslim edildi:</b> sayfanın dönüşüm odaklı yeniden kurgusunu gösteren <a href="demo/">tasarım örneği (5 varyant)</a> ve içerik ekibinin doğrudan yazıma geçebileceği <a href="#brief">Hız Testi Sayfası İçerik Brief'i</a>.</li>
+      </ul>
       <div class="hl-cards">
         <div class="hl now">
           <div class="t">Mevcut Durum</div>
@@ -295,7 +308,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
     <section class="section" id="durum">
       <div class="eyebrow">Sayfanın Mevcut Durumu</div>
       <h2>Turkcell Hız Testi Sayfası: Sıralama Durumu ve Yapısal Geliştirmeler</h2>
-      <p>Sayfa, kullanıcının test aracıyla etkileşime girdiği bir <span class="term" data-term="Kullanıcının bir araçla etkileşime girdiği, bilgi ve işlem içeren sayfa.">araç / hub sayfasıdır</span>. Ana içerik, Turkcell alt alan adına (<span class="codei">turkcellhiztesti.speedtestcustom.com</span>) bağlı <b>Ookla Speedtest Custom</b> aracıdır; altında 37 maddelik bir SSS bölümü ve Superbox / ev interneti kampanya kutuları yer alır. Sayfa teknik olarak hızlıdır (ölçülen Lighthouse performans puanı 91/100, LCP 1,23 sn, CLS 0,099; ayrıntı için bkz. Bölüm 10). Sıralamayı ve dönüşümü etkileyen iki yapısal konu öne çıkıyor.</p>
+      <p>Sayfa, kullanıcının test aracıyla etkileşime girdiği bir <span class="term" data-term="Kullanıcının bir araçla etkileşime girdiği, bilgi ve işlem içeren sayfa.">araç / hub sayfasıdır</span>. Ana içerik, Turkcell alt alan adına (<span class="codei">turkcellhiztesti.speedtestcustom.com</span>) bağlı <b>Ookla Speedtest Custom</b> aracıdır; altında 37 maddelik bir SSS bölümü ve Superbox / ev interneti kampanya kutuları yer alır. Sayfa teknik olarak hızlıdır (ölçülen Lighthouse performans puanı 91/100, LCP 1,23 sn, CLS 0,099; ayrıntı için bkz. Bölüm 09). Sıralamayı ve dönüşümü etkileyen iki yapısal konu öne çıkıyor.</p>
 
       <div class="callout callout--bad">
         <b>1. Marka tutarlılığı.</b> Sayfa <span class="codei">turkcell.com.tr</span> üzerinde yayında; ancak başlık etiketi "… - Superonline", meta açıklama ve gövde metni "Superonline Hız Testi" diliyle yazılmış. Kullanıcı "Turkcell hız testi" araması yapıp Superonline diliyle yazılmış bir sayfaya geliyor; bu da marka algısını zayıflatıyor. Türk Telekom ve Vodafone sayfaları baştan sona kendi ana markaları altında.
@@ -316,17 +329,17 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           <div class="shot__cap"><b>Hedef sayfa · mobil</b>Aramaların %76-86'sı mobil olduğundan mobil deneyim önceliklidir.</div>
         </div>
       </div>
-      <div class="insight"><span class="lead-in">Çıkarım</span>Aramaların büyük kısmı mobil cihazlardan geliyor (hız testi %76, internet hız testi %86, 5g hız testi %96); ancak sayfa "Superonline / ev interneti" diliyle kurgulanmış. Mobil ve 5G, Turkcell'in en güçlü olduğu ama sayfada en az işlenen alan. Bu, hem öncelikli bir fırsat hem de içerik yön tercihidir.</div>
+      <div class="insight"><span class="lead-in">Çıkarım</span>Aramaların büyük kısmı mobil cihazlardan geliyor (hız testi %76, internet hız testi %86, 5g hız testi %96); ancak sayfa "Superonline / ev interneti" diliyle kurgulanmış. Mobil ve 5G, Turkcell'in en güçlü olduğu ama sayfada en az işlenen alan. Bu kısım, Turkcell paketlerini öne çıkarmak için bir fırsat alanı olarak değerlendirilebilir.</div>
     </section>
 
     <!-- 03 -->
     <section class="section" id="serp">
-      <div class="eyebrow">SERP &amp; Görünürlük</div>
-      <h2>Doğrulanmış sıralamalar ve dört ana sorgu</h2>
+      <div class="eyebrow">Sıralamalar &amp; Odak Keywordler</div>
+      <h2>Sıralamalar ve odak keywordlerdeki durum</h2>
       <p class="small muted">Kaynak: Ahrefs (Türkiye), gözlem 21-26 Haziran 2026. DR = Domain Rating, UR = URL Rating. Turkcell satırı sarı şeritle işaretlidir.</p>
       <div class="grid-2">
         <div class="chart-card">
-          <h4>Turkcell sırası · dört ana sorgu</h4>
+          <h4>Turkcell sırası · dört ana keyword</h4>
           <div class="sub">1 en iyidir. speedtest dışında dördünde de 4. sıra; aşılması gereken rakip Türk Telekom.</div>
           <div class="chart-box sm"><canvas id="chRank"></canvas></div>
         </div>
@@ -364,7 +377,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
               <tr><td class="num">5</td><td>fast.com/tr</td><td class="num">20</td></tr>
             </tbody>
           </table></div>
-          <p class="small"><span class="pill p-pos">Fırsat</span> speedtest.net dışında rakip yok; 1. sıraya en yakın olunan sorgu budur.</p>
+          <p class="small"><span class="pill p-pos">Fırsat</span> speedtest.net dışında rakip yok; 1. sıraya en yakın olunan keyword budur.</p>
         </div>
         <div>
           <h3>"speed test" · 478.000/ay · Turkcell 4. sırada</h3>
@@ -377,7 +390,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
               <tr class="us"><td class="num">4</td><td><b>turkcell.com.tr/hiz-testi</b></td><td class="num">12</td></tr>
             </tbody>
           </table></div>
-          <p class="small">"internet hız testi" (844.000/ay) sorgusunda da tablo aynı: Turkcell 4., üstte Türk Telekom ve Fast.com.</p>
+          <p class="small">"internet hız testi" (844.000/ay) keyword'ünde de tablo aynı: Turkcell 4., üstte Türk Telekom ve Fast.com.</p>
         </div>
       </div>
 
@@ -388,7 +401,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           <div class="shot__cap"><b>Canlı SERP · "hız testi"</b>Üstte bilgi kutusu; alt sıralarda operatör ve global araç rekabeti.</div>
         </div>
       </div>
-      <div class="insight"><span class="lead-in">Çıkarım</span>1. sıranın önünde iki engel var: Türk Telekom (her sorguda Turkcell'in üstünde) ve sayfanın düşük URL Rating değeri. Domain otoritesi (DR 78) yeterli; eksik olan, sayfaya gelen iç ve dış bağlantı akışı. İç bağlantı düzeni, marka tutarlılığı ve içerik derinliği birlikte 1. sırayı getirir.</div>
+      <div class="insight"><span class="lead-in">Çıkarım</span>1. sıranın önünde iki engel var: Türk Telekom (her keywordde Turkcell'in üstünde) ve sayfanın düşük URL Rating değeri. Domain otoritesi (DR 78) yeterli; eksik olan, sayfaya gelen iç ve dış bağlantı akışı. İç bağlantı düzeni, marka tutarlılığı ve içerik derinliği birlikte 1. sırayı getirir.</div>
     </section>
 
     <!-- 04 -->
@@ -408,22 +421,21 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           <tr><td>internet hız testi</td><td class="num">844.000</td><td class="num">62</td><td>bilgi</td><td class="num">86</td><td>Ana hedef</td></tr>
           <tr><td>speed test</td><td class="num">478.000</td><td class="num">70</td><td>bilgi</td><td class="num">56</td><td>Ana hedef</td></tr>
           <tr><td>türk telekom hız testi</td><td class="num">72.000</td><td class="num">64</td><td>markalı</td><td class="num">54</td><td>Rakip markalı</td></tr>
-          <tr><td>ip sorgulama</td><td class="num">15.000</td><td class="num">54</td><td>bilgi</td><td class="num">42</td><td><span class="pill p-amber">Eski link</span> Superonline'a gidiyor</td></tr>
+          <tr><td>ip sorgulama</td><td class="num">15.000</td><td class="num">54</td><td>bilgi</td><td class="num">42</td><td><span class="pill p-amber">404 link</span> ip-adresim sayfası canlı, iç link verilebilir</td></tr>
           <tr><td>turkcell hız testi</td><td class="num">8.600</td><td class="num">54</td><td>markalı</td><td class="num">78</td><td>Kendi markalı</td></tr>
           <tr><td>ping testi</td><td class="num">2.900</td><td class="num">1</td><td>bilgi</td><td class="num">28</td><td><span class="pill p-pos">KD 1 · kolay 1. sıra</span> Superonline'a gidiyor</td></tr>
           <tr><td>5g hız testi</td><td class="num">60</td><td class="num">63</td><td>bilgi</td><td class="num">96</td><td><span class="pill p-info">AI Overview tetikliyor</span></td></tr>
         </tbody>
       </table></div>
       <div class="grid-2">
-        <div class="callout callout--pos"><b>Düşük zorlukta kolay kazanımlar</b><ul class="clean"><li><b>ping testi</b> · 2.900/ay, zorluk (KD) 1. Turkcell'in kendi sayfası var (turkcell.com.tr/internet-ping-testi) ama hız testi sayfasındaki bağlantı Superonline'a gidiyor. Gömülü ping aracı ve site içi bağlantı ile 1. sıra çok kolay.</li><li><b>ip sorgulama</b> · 15.000/ay, KD 54. Turkcell'in kendi aracı yok; bağlantı Superonline'a gidiyor. Yeni araç fırsatı.</li><li><b>internet hız testi ookla</b> · 1.600/ay, KD 6.</li></ul></div>
-        <div class="callout callout--warn"><b>Niyeti uymadığı için hedeflenmemeli</b><ul class="clean cross"><li><b>klavye hız testi</b> (42.000/ay) ve <b>10/on parmak hız testi</b> (~5.500/ay) yüksek hacimli, ancak <b>klavye/yazma testi</b> aramalarıdır; internet hızıyla ilgisi yok. Bu kelimeler için içerik üretmek sayfanın konu odağını bozar; kapsam dışında bırakılmalı.</li></ul></div>
+        <div class="callout callout--pos"><b>Düşük zorlukta kolay kazanımlar</b><ul class="clean"><li><b>ping testi</b> · 2.900/ay, zorluk (KD) 1. Turkcell'in kendi sayfası var (turkcell.com.tr/internet-ping-testi) ama hız testi sayfasındaki bağlantı Superonline'a gidiyor. Gömülü ping aracı ve site içi bağlantı ile 1. sıra hedeflenebilir.</li><li><b>ip sorgulama</b> · 15.000/ay, KD 54. Hız testi sayfasındaki bağlantı 404'e gidiyor; oysa Turkcell'in <a href="https://www.turkcell.com.tr/kampanya/ip-adresim/" target="_blank" rel="noopener">turkcell.com.tr/kampanya/ip-adresim</a> sayfası canlı. Bu sayfaya site içi bağlantı verilerek değerlendirilebilir.</li><li><b>internet hız testi ookla</b> · 1.600/ay, KD 6.</li></ul></div>
       </div>
     </section>
 
-    <!-- 05 RAKIP BOŞLUK -->
+    <!-- 05 CONTENT GAP + RAKIP -->
     <section class="section" id="gap">
-      <div class="eyebrow">Rakip Boşluk Analizi</div>
-      <h2>Rakiplerin aldığı, bizim almadığımız trafik ve içerik</h2>
+      <div class="eyebrow">Content Gap &amp; Rakip İçerik Karşılaştırması</div>
+      <h2>Rakiplerin trafik aldığı, bizim daha az trafik aldığımız kelimeler ve içerikleri</h2>
       <p>Rakiplerin hız testi sayfalarının trafik getiren kelimeleri Turkcell'in sayfasıyla karşılaştırıldı. Aşağıdaki kelimelerde rakipler iyi sıralanırken Turkcell ya hiç sıralamıyor ya da 5-6. sırada. Bunların tamamı içerik ve başlık düzeyinde kapatılabilir.</p>
 
       <h3>Kelime boşluğu</h3>
@@ -461,29 +473,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         <li><b>Ölçüm:</b> "İnternet hızı nasıl ölçülür?" sorusunu bağımsız ve güçlü bir başlık olarak vermek</li>
         <li><b>Mobil uzun kuyruk (Excel önerisinden, hâlâ eksik):</b> eski SIM kartın 5G sınırı, modem çip seti etkisi, baz istasyonu uzaklığı, Carrier Aggregation, adil kullanım politikası, mobil upload düşüklüğü, kapalı alanda hız.</li>
       </ul>
-      <div class="insight"><span class="lead-in">Çıkarım</span>Kapatılması gereken üç boşluk var: (1) bilgi ve araç kelimeleri (internet speed test, adsl hız testi, internet hızı ölçme); (2) yapısal tablolar (hız-ihtiyaç eşleme ve indirme süresi); (3) 5G, ADSL ve ölçüm içeriği. Üçü de Bölüm 11'deki içerik brief'inde adım adım planlandı.</div>
-    </section>
-
-    <!-- 06 GEO -->
-    <section class="section" id="geo">
-      <div class="eyebrow">AI Overview &amp; GEO</div>
-      <h2>Yapay zeka aramalarında görünürlük (GEO)</h2>
-      <p>"hız testi" ve türevlerinde SERP'te sürekli bir <span class="term" data-term="Google'ın sonuç sayfasının üstünde gösterdiği, kısa tanım içeren bilgi kutusu.">bilgi kutusu (knowledge card)</span> görünüyor; "5g hız testi" gibi sorgular ise <span class="term" data-term="Google'ın üretken yapay zeka ile oluşturup kaynak siteleri özetlediği yanıt bloğu.">AI Overview</span> tetikliyor. İncelenen altı rakibin hiçbiri JSON-LD <span class="term" data-term="Arama motorlarına sayfa içeriğini makine tarafından okunabilir biçimde tanımlayan yapısal veri.">şema işaretlemesi</span> kullanmıyor. Bu, hem zengin sonuç hem de yapay zeka alıntıları için tamamen boş bir alan.</p>
-      <h3>GEO yol haritası</h3>
-      <ul class="clean">
-        <li><b>Alıntılanabilir tanım:</b> "Hız testi nedir?" sorusu için 40-60 kelimelik net bir paragraf (bilgi kutusu ve AI Overview hedefi). <span class="src src-new">Yeni</span></li>
-        <li><b>FAQPage şeması:</b> mevcut 37 maddelik SSS işaretlenirse AI Overview ve "diğer sorular" alıntıları artar. <span class="src src-plus">+★</span></li>
-        <li><b>WebApplication şeması:</b> sayfanın bir ölçüm aracı olduğunu tanımlar. <span class="src src-plus">+★</span></li>
-        <li><b>Makine okunur karşılaştırma tablosu</b> (hız ile kullanım/indirme süresi) ve Dataset şeması. <span class="src src-plus">+★</span></li>
-        <li><b>robots.txt ve llms.txt:</b> GPTBot, Google-Extended ve PerplexityBot erişimine izin. <span class="src src-new">Yeni</span></li>
-      </ul>
-      <div class="insight"><span class="lead-in">Çıkarım</span>"5g hız testi" şimdiden AI Overview tetiklediğinden, 5G/mobil hız testi içeriği ve şema ile bu alanda erken konumlanmak mümkün. Rakipler bu alanı boş bırakmış.</div>
-    </section>
-
-    <!-- 07 RAKIP -->
-    <section class="section" id="rakip">
-      <div class="eyebrow">Rakip İçerik Karşılaştırması</div>
-      <h2>Rakip sayfalarda neler var ve Türk Telekom neden üstte</h2>
+      <h3>Rakip sayfalarda neler var ve Türk Telekom neden üstte</h3>
       <div class="table-wrap"><table>
         <thead><tr><th>Marka</th><th>Sıra</th><th>Test aracı</th><th>Dönüşüm öğeleri</th><th class="num">SSS</th><th>Şema</th></tr></thead>
         <tbody>
@@ -534,9 +524,28 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           <div class="shot__cap"><b>TurkNet · mobil</b>Altyapı sorgulama CTA'sı mobilde de tekrar ediyor.</div>
         </div>
       </div>
+
+      <div class="insight"><span class="lead-in">Çıkarım</span>Kapatılması gereken üç boşluk var: (1) bilgi ve araç kelimeleri (internet speed test, adsl hız testi, internet hızı ölçme); (2) yapısal tablolar (hız-ihtiyaç eşleme ve indirme süresi); (3) 5G, ADSL ve ölçüm içeriği. Türk Telekom bu alanlarda Turkcell'in önünde; üçü de Bölüm 10'daki içerik brief'inde adım adım planlandı.</div>
     </section>
 
-    <!-- 08 LINKLER -->
+    <!-- 06 GEO -->
+    <section class="section" id="geo">
+      <div class="eyebrow">AI Overview &amp; GEO</div>
+      <h2>Yapay zeka aramalarında görünürlük (GEO)</h2>
+      <p>"hız testi" ve türevlerinde SERP'te sürekli bir <span class="term" data-term="Google'ın sonuç sayfasının üstünde gösterdiği, kısa tanım içeren bilgi kutusu.">bilgi kutusu (knowledge card)</span> görünüyor; "5g hız testi" gibi keywordler ise <span class="term" data-term="Google'ın üretken yapay zeka ile oluşturup kaynak siteleri özetlediği yanıt bloğu.">AI Overview</span> tetikliyor. İncelenen altı rakibin hiçbiri JSON-LD <span class="term" data-term="Arama motorlarına sayfa içeriğini makine tarafından okunabilir biçimde tanımlayan yapısal veri.">şema işaretlemesi</span> kullanmıyor. Bu, hem zengin sonuç hem de yapay zeka alıntıları için tamamen boş bir alan.</p>
+      <h3>GEO yol haritası</h3>
+      <ul class="clean">
+        <li><b>Alıntılanabilir tanım:</b> "Hız testi nedir?" sorusu için 40-60 kelimelik net bir paragraf (bilgi kutusu ve AI Overview hedefi). <span class="src src-new">Yeni</span></li>
+        <li><b>FAQPage şeması:</b> mevcut 37 maddelik SSS işaretlenirse AI Overview ve "diğer sorular" alıntıları artar. <span class="src src-plus">+★</span></li>
+        <li><b>WebApplication şeması:</b> sayfanın bir ölçüm aracı olduğunu tanımlar. <span class="src src-plus">+★</span></li>
+        <li><b>Makine okunur karşılaştırma tablosu</b> (hız ile kullanım/indirme süresi) ve Dataset şeması. <span class="src src-plus">+★</span></li>
+        <li><b>robots.txt ve llms.txt:</b> GPTBot, Google-Extended ve PerplexityBot erişimine izin. <span class="src src-new">Yeni</span></li>
+      </ul>
+      <div class="insight"><span class="lead-in">Çıkarım</span>"5g hız testi" şimdiden AI Overview tetiklediğinden, 5G/mobil hız testi içeriği ve şema ile bu alanda erken konumlanmak mümkün. Rakipler bu alanı boş bırakmış.</div>
+      <div class="callout callout--info"><b>JSON-LD şema notu:</b> JSON-LD işaretlemenin yapay zeka görünürlüğüne doğrudan katkı sağlamadığını gösteren çalışmalar mevcut. Ancak bu işaretlemeler sayfayı arama motorları için <b>daha anlaşılır</b> kılar, zengin sonuç (rich result) ihtimalini artırır ve sayfaya <b>ek yük bindirmez</b> (küçük, görünmeyen bir betik bloğudur). Bu nedenle bir maliyeti olmadığından, bu rapordaki şema önerileri güvenle eklenebilir.</div>
+    </section>
+
+    <!-- 07 LINKLER -->
     <section class="section" id="linkler">
       <div class="eyebrow">Eski Linkler &amp; İç Yönlendirme</div>
       <h2>superonline.net'e giden bağlantılar ve Turkcell içi karşılıkları</h2>
@@ -545,18 +554,18 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         <thead><tr><th>Bağlantı</th><th>Mevcut hedef (superonline.net)</th><th>Turkcell içi karşılık / öneri</th><th>Durum</th></tr></thead>
         <tbody>
           <tr><td><b>Ping Testi</b></td><td>/internet-ping-testi</td><td><a href="https://www.turkcell.com.tr/internet-ping-testi" target="_blank" rel="noopener">turkcell.com.tr/internet-ping-testi</a> zaten var; bağlantı site içine alınmalı. İdeali: gömülü ping aracı (KD 1, kolay 1. sıra).</td><td><span class="src src-new">Yeni</span></td></tr>
-          <tr><td><b>IP Sorgulama</b></td><td>/ip-adresi-sorgulama</td><td>Turkcell'de kendi sayfası <b>yok</b> (/ip-sorgulama 404 veriyor). Öneri: Turkcell içi IP sorgulama aracı (15.000/ay, KD 54).</td><td><span class="src src-new">Yeni</span></td></tr>
+          <tr><td><b>IP Sorgulama</b></td><td>/ip-adresi-sorgulama</td><td>Hız testi sayfasındaki bağlantı 404; ancak Turkcell'in <a href="https://www.turkcell.com.tr/kampanya/ip-adresim/" target="_blank" rel="noopener">/kampanya/ip-adresim</a> sayfası canlı. Bu sayfaya iç bağlantı verilmeli (15.000/ay, KD 54).</td><td><span class="src src-new">Yeni</span></td></tr>
           <tr><td>altyapı sorgulama (gövde)</td><td>/altyapi-sorgulama</td><td><a href="https://www.turkcell.com.tr/ev-interneti/superbox-basvuru-ve-altyapi-sorgulama" target="_blank" rel="noopener">turkcell.com.tr ev interneti altyapı sorgulama</a> zaten var</td><td><span class="src src-new">Yeni</span></td></tr>
           <tr><td>fiber internet / 1000 / 200 Mbps</td><td>/ev-interneti/…</td><td>turkcell.com.tr/ev-interneti tarife sayfaları</td><td><span class="src src-new">Yeni</span></td></tr>
         </tbody>
       </table></div>
       <div class="grid-2">
-        <div class="callout callout--pos"><b>Hızlı kazanım: ping testi.</b> "ping testi" zorluğu 1. Turkcell'in kendi sayfası zaten var; bağlantı site içine alınıp sayfaya gerçek bir gömülü ping aracı eklenirse bu sorguda 1. sıra düşük çabayla alınır ve hız testi sayfasıyla karşılıklı bağlantı kurulur.</div>
+        <div class="callout callout--pos"><b>Hızlı kazanım: ping testi.</b> "ping testi" zorluğu 1. Turkcell'in kendi sayfası zaten var; bağlantı site içine alınıp sayfaya gerçek bir gömülü ping aracı eklenirse bu keywordde 1. sıra düşük çabayla alınır ve hız testi sayfasıyla karşılıklı bağlantı kurulur.</div>
         <div class="callout callout--info"><b>İlke.</b> Hız testi, Turkcell'in en güçlü organik sayfalarından biri. Bağlantıları site içinde (turkcell.com.tr) tutmak otoriteyi içeride bırakır ve sayfanın URL Rating değerini (12) yükselterek doğrudan 1. sıra hedefine hizmet eder.</div>
       </div>
     </section>
 
-    <!-- 09 CRO -->
+    <!-- 08 CRO -->
     <section class="section" id="cro">
       <div class="eyebrow">CRO / Dönüşüm / Lead</div>
       <h2>Ölçüm aracını dönüşüm ve lead kanalına dönüştürmek</h2>
@@ -608,14 +617,29 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           </ul>
         </div>
       </div>
+      <h3>Demo bileşenleri: neden eklenmeli ve beklenen kazanım</h3>
+      <p>Tasarım örneğinin son halindeki başlıca bileşenler ve her birinin dönüşüm/SEO gerekçesi:</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Bileşen (demo)</th><th>Ne yapıyor</th><th>Neden eklenebilir</th><th>Beklenen kazanım</th></tr></thead>
+        <tbody>
+          <tr><td>Sonuç-tetikli akıllı paket önerisi (Varyant A)</td><td>Test biter bitmez ölçülen hıza göre paket önerir, tek tıkla başvuru</td><td>Hiçbir rakipte yok; testten sonra net bir sonraki adım sunulmuyor</td><td>Test → başvuru dönüşümü; "en akıllı araç" algısı ve kategori liderliği</td></tr>
+          <tr><td>Hız Karnesi (Varyant B)</td><td>Download/upload/ping skor kartları + "bu hız neye yeter" + güven şeridi (Ookla/Turkcell/KVKK)</td><td>Sade sonuç ekranını bilgilendirici ve güven verici hale getirir</td><td>Sayfada kalma süresi ve pakete tıklama oranı artışı</td></tr>
+          <tr><td>Paket Köprüsü (Varyant E) + "Sana Uygun Paketler" karoseli</td><td>Sonucu Turkcell One, 5G'li hat ve ev interneti paketlerine bağlar</td><td>Yüksek trafik (tahmini 496.000/ay) bugün dönüşüme bağlanmıyor</td><td>Çapraz satış; tek ziyaretten birden çok ürün fırsatı</td></tr>
+          <tr><td>İki "Neler Var" on-domain kart hub'ı (Ev İnterneti + Turkcell)</td><td>superonline.net yerine turkcell.com.tr araç/paket bağlantıları</td><td>Sayfa bugün equity'yi ayrı bir alan adına sızdırıyor (Bölüm 07)</td><td>İç bağlantı + otorite Turkcell'de kalır; URL Rating'i besler</td></tr>
+          <tr><td>Yan ray CTA'ları (One Plus + 5G)</td><td>Geniş ekranda boş sol/sağ alanlara paket yönlendirmesi</td><td>Sağ/sol boşluklar değerlendirilmiyor; varyanta göre içerik/logo değişir</td><td>Görünür alan başına ek dönüşüm teması</td></tr>
+          <tr><td>Hız-ihtiyaç + indirme süresi tabloları</td><td>Her satır ilgili Turkcell pakete bağlanır</td><td>Rakiplerde (TT/Vodafone/TurkNet) var, Turkcell'de yok</td><td>"Kaç Mbps?" niyetini pakete köprüler; bilgi → dönüşüm</td></tr>
+          <tr><td>Adres/altyapı lead akışı (Varyant D)</td><td>Numara + adres ile lead toplama formu</td><td>TurkNet modeli; sayfada bugün lead kanalı yok</td><td>Doğrudan lead/başvuru üretimi</td></tr>
+          <tr><td>Premium "Test tamamlandı" rozeti + interaktif SSS</td><td>Nabız animasyonlu rozet, açılır-kapanır kümelenmiş SSS akordeonu</td><td>Görsel kalite ve okunabilirlik</td><td>Algılanan kalite ve SSS etkileşimi artışı</td></tr>
+        </tbody>
+      </table></div>
       <div class="btnrow"><a class="btn btn-y" href="demo/">Tasarım örneğini aç · 5 varyant</a></div>
-      <p class="small muted">Tasarım örneği, sayfanın üst menü ve footer yapısını koruyup gövdeyi 5 dönüşüm yaklaşımıyla yeniden kurar: A · Akıllı Sonuç, B · Hız Karnesi (download/upload/ping karne + güven şeridi), C · Değer/Paket, D · Lead/Altyapı, E · Paket Köprüsü (sonuç → Turkcell One Plus upsell). Ayrıca örnekte uygulananlar: canlıdaki iki "Neler Var" kart bölümü (Ev İnterneti + Turkcell, on-domain iç bağlantı hub'ı), <b>Turkcell One paket karoseli</b> ve geniş ekranda sol/sağ <b>yan ray CTA'ları</b> (One Plus + 5G) ile paket köprüsü, nabız animasyonlu "Test tamamlandı" rozeti, footer iç bağlantı menüsü ve interaktif SSS akordeonu.</p>
+      <p class="small muted">Tasarım örneği, sayfanın üst menü ve footer yapısını koruyup gövdeyi 5 dönüşüm yaklaşımıyla yeniden kurar: A · Akıllı Sonuç, B · Hız Karnesi, C · Değer/Paket, D · Lead/Altyapı, E · Paket Köprüsü. Bileşenler varyanta göre farklılaşır (örn. yan ray karoselleri ve "Sana Uygun Paketler" içeriği her varyantta değişir).</p>
     </section>
 
-    <!-- 10 TEKNIK -->
+    <!-- 09 TEKNIK -->
     <section class="section" id="teknik">
-      <div class="eyebrow">Teknik, Hız &amp; fast.com</div>
-      <h2>Teknik denetim, ölçülen performans ve fast.com değerlendirmesi</h2>
+      <div class="eyebrow">Teknik &amp; On-Page SEO</div>
+      <h2>Teknik &amp; On Page SEO Elementleri İncelemesi &amp; Çıkarımlar</h2>
       <h3>Sayfa içi (on-page) denetimi</h3>
       <p class="small muted">Bunlar sayfa içi SEO bulgularıdır (performans metriği değil). Kaynak: DataForSEO sayfa içi denetimi, 26 Haziran 2026.</p>
       <div class="table-wrap"><table>
@@ -632,7 +656,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
       </table></div>
 
       <h3>Core Web Vitals · ölçülen değerler</h3>
-      <p class="small muted">Yöntem: Lighthouse (DataForSEO, masaüstü) ve gerçek tarayıcı ölçümü (Playwright), 26 Haziran 2026. Eşikler: LCP iyi &lt; 2,5 sn, CLS iyi &lt; 0,1, TBT iyi &lt; 200 ms.</p>
+      <p class="small muted">Yöntem: Lighthouse (DataForSEO, masaüstü) ve gerçek tarayıcı ölçümü, 26 Haziran 2026. Eşikler: LCP iyi &lt; 2,5 sn, CLS iyi &lt; 0,1, TBT iyi &lt; 200 ms.</p>
       <div class="grid-2">
         <div class="chart-card">
           <h4>Lighthouse (masaüstü)</h4>
@@ -650,7 +674,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         </div>
         <div class="chart-card">
           <h4>Gerçek tarayıcı ölçümü (çapraz kontrol)</h4>
-          <div class="sub">Playwright ile ısınmış önbellekte. Lighthouse değerlerini doğruluyor; sayfa hızlı.</div>
+          <div class="sub">Gerçek tarayıcı ile ısınmış önbellekte. Lighthouse değerlerini doğruluyor; sayfa hızlı.</div>
           <ul class="clean tick">
             <li>LCP 0,20 sn, FCP 0,19 sn, CLS 0, sayfa yükleme 1,07 sn.</li>
             <li>Diğer Lighthouse puanları: Erişilebilirlik 81/100, En İyi Pratikler 96/100, SEO 100/100.</li>
@@ -670,8 +694,8 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         <li><b>Render engelleyen kaynakları azalt:</b> kritik CSS satır içine alınmalı, geri kalan ertelenmeli.</li>
       </ul>
 
-      <h3>fast.com'daki otomatik başlatma: değerlendirme</h3>
-      <p>fast.com, sayfa açılır açılmaz testi otomatik başlatır. Nedeni, Netflix'in tek amacının "bağlantım video için yeterli mi?" sorusuna sürtünmesiz yanıt vermesidir; sunucu seçimi, ayar veya reklam yoktur. Otomatik başlatma etkileşimi artırır ve anında cevap algısı verir.</p>
+      <h3>fast.com start vermeden oto hız testi değerlendirmesi</h3>
+      <p>fast.com'da sayfa açılır açılmaz test otomatik başlar. Nedeni, Netflix'in amacının "bağlantım video için yeterli mi?" sorusuna en hızlı şekilde yanıt vermesi için tasarlanmasıdır. Sunucu seçimi, ayar veya reklam yoktur. Otomatik başlatma etkileşimi artırır ve anında cevap algısı verir.</p>
       <div class="grid-2">
         <div class="callout callout--pos"><b>Turkcell için artısı:</b> sürtünmeyi azaltır, sonuç ve paket önerisi daha erken gösterilir, etkileşim artar.</div>
         <div class="callout callout--warn"><b>Dikkat (mobil veri):</b> sayfa zaten "mobil ağda test internet paketinizden veri tüketir" uyarısı veriyor. Onaysız otomatik başlatma mobilde kullanıcının verisini harcar ve şikayet riski taşır.</div>
@@ -679,10 +703,11 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
       <div class="insight"><span class="lead-in">Öneri</span>Hibrit yaklaşım: Wi-Fi ve masaüstü bağlantılarında otomatik başlat; mobil veri algılanırsa tek dokunuşla başlat ve "veri tüketir" notunu göster. Böylece fast.com'un sürtünmesiz deneyimi alınır, mobil veri riski yönetilir. <span class="src src-new">Yeni</span></div>
     </section>
 
-    <!-- 11 ICERIK BRIEF -->
+    <!-- 10 ICERIK BRIEF -->
     <section class="section" id="brief">
-      <div class="eyebrow">İçerik Yazım Brief'i</div>
-      <h2>Uygulamaya hazır içerik brief'i</h2>
+      <div class="eyebrow">İçerik Brief'i</div>
+      <h2>Hız Testi Sayfası İçerik Brief'i</h2>
+      <a class="xls-btn" href="assets/turkcell-hiz-testi-aksiyon-brief.xlsx" download><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Brief + aksiyon planını Excel'e aktar</a>
       <p>Bu brief, içerik ekibinin doğrudan yazıma geçebilmesi için hazırlanmıştır: sayfa başlığı, başlık hiyerarşisi, hangi kelimelerin nerede ve ne sıklıkla geçeceği, hangi tabloların ve SSS'lerin yer alacağı, özet ve giriş içeriği. Hedef kelimeler; ana hacim, rakip boşluğu ve uzun kuyruk (long-tail) olmak üzere üç katmanda verilmiştir.</p>
 
       <h3>1. Başlık ve meta</h3>
@@ -705,33 +730,58 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           <tr><td>H2 · İnternet Hız Testi (Speed Test) Nedir?</td><td>40-60 kelimelik, tek paragraf, alıntılanabilir tanım (AI Overview / bilgi kutusu hedefi). "internet hız testi …dır" kalıbıyla başla.</td><td><b>internet hız testi</b>, speedtest, speed test nedir, internet speed test</td></tr>
           <tr><td>H2 · İnternet Hızı Nasıl Ölçülür?</td><td>Numaralı adım adım anlatım + HowTo şeması. "indirme/yükleme/ping nasıl ölçülür" alt paragrafları. Rakip boşluğu: Türk Telekom bu kelimede #1, Turkcell #5.</td><td><b>internet hızı ölçme</b>, internet hızı nasıl ölçülür, internet indirme hızı ölçme, internet hat hızı öğrenme</td></tr>
           <tr><td>H2 · İnternet Hız Testinde Metrikler</td><td>Download, upload, ping, jitter, packet loss, Mbps için kısa tanım + ideal değer; her terim tek cümlede alıntılanabilir olsun.</td><td>ping nedir, jitter nedir, packet loss nedir, mbps nedir, download upload nedir</td></tr>
-          <tr><td>H2 · Hangi Hız Hangi Kullanıma Yeter?</td><td>Hız-ihtiyaç eşleme tablosu + 10 GB indirme süresi tablosu; her satır ilgili Turkcell paketine bağlanır. "kaç Mbps olmalı" sorgularını karşılar, dönüşüme köprü.</td><td><b>internet hızı kaç olmalı</b>, ideal internet hızı, kaç mbps olmalı, download upload hızı kaç olmalı</td></tr>
+          <tr><td>H2 · Hangi Hız Hangi Kullanıma Yeter?</td><td>Hız-ihtiyaç eşleme tablosu + 10 GB indirme süresi tablosu; her satır ilgili Turkcell paketine bağlanır. "kaç Mbps olmalı" keyword'lerini karşılar, dönüşüme köprü.</td><td><b>internet hızı kaç olmalı</b>, ideal internet hızı, kaç mbps olmalı, download upload hızı kaç olmalı</td></tr>
           <tr><td>H2 · ADSL, Fiber ve Wi-Fi Hız Testi</td><td>Bağlantı türüne göre farklar; ADSL'e özel paragraf (rakip boşluğu: adsl hız testi 12-16K, Türk Telekom #2, Turkcell yok). Wi-Fi vs kablolu ölçüm farkı.</td><td><b>adsl hız testi</b>, wifi hız testi, fiber hız testi, adsl fiber farkı</td></tr>
           <tr><td>H2 · Mobil ve 5G Hız Testi</td><td>Mobilde doğru ölçüm + 5G değer vaadi + 5G CTA. Turkcell'in en güçlü olduğu ama sayfada en az işlenen alan (aramaların %76-96'sı mobil).</td><td><b>5g hız testi</b>, mobil hız testi, 4.5g hız testi, telefon hız testi</td></tr>
           <tr><td>H2 · Sıkça Sorulan Sorular</td><td>Mevcut 37 SSS korunur + 5G/ADSL/uzun kuyruk eklenir (FAQPage şeması). Aşağıdaki "Eklenecek SSS" listesine bakın.</td><td>uzun kuyruk SSS (long-tail)</td></tr>
         </tbody>
       </table></div>
 
-      <h3>3. Kelime kullanım yoğunluğu</h3>
+      <h3>3. Kelime kullanım yoğunluğu (rakip karşılaştırmalı)</h3>
+      <p>En önemli rakip 1. sıradaki <b>Türk Telekom</b> ve aynı tarz hizmet veren <b>Vodafone</b> hız testi sayfaları içerik düzeyinde tek tek incelendi. İçerik hacmi: <b>Turkcell ~1.633 kelime</b> · Türk Telekom ~2.643 · Vodafone ~3.630 · yani Turkcell sayfası rakiplerin yaklaşık yarısı kadar içeriğe sahip. Aşağıda hedef kelimelerin her sayfada gözlemlenen geçiş sayısı ve Turkcell için önerilen hedef yer alıyor.</p>
       <div class="table-wrap"><table>
-        <thead><tr><th>Kelime</th><th>Önerilen geçiş</th><th>Nerede</th></tr></thead>
+        <thead><tr><th>Kelime</th><th class="num">Türk Telekom</th><th class="num">Vodafone</th><th class="num">Turkcell (mevcut)</th><th class="num">Önerilen hedef</th><th>Aksiyon / nerede</th></tr></thead>
         <tbody>
-          <tr><td>hız testi</td><td>8-12 kez</td><td>H1, ilk paragraf, H2'ler, SSS</td></tr>
-          <tr><td>internet hız testi</td><td>5-8 kez</td><td>Tanım H2, meta, gövde</td></tr>
-          <tr><td>speed test / speedtest</td><td>3-5 kez</td><td>Başlık, tanım, "nedir" bölümü</td></tr>
-          <tr><td>internet hızı ölçme / nasıl ölçülür</td><td>3-4 kez</td><td>Ölçüm H2 ve adımlar</td></tr>
-          <tr><td>adsl / wifi / fiber / 5g hız testi</td><td>2-3 kez (her biri)</td><td>İlgili H2 başlıkları</td></tr>
-          <tr><td>ping, jitter, packet loss, download, upload, mbps</td><td>tanımlandığı yerde 1-2 kez</td><td>Metrik açıklamaları ve SSS</td></tr>
+          <tr><td>download / indirme</td><td class="num">38</td><td class="num">47</td><td class="num">26</td><td class="num">40-45</td><td>Birincil metrik; gövde + SSS'de "indirme hızı" bağlamını artır</td></tr>
+          <tr><td>mbps</td><td class="num">13</td><td class="num">31</td><td class="num">16</td><td class="num">22-25</td><td>"kaç Mbps", örnek hız değerleri (100/1000 Mbps)</td></tr>
+          <tr><td>internet hızı</td><td class="num">30</td><td class="num">47</td><td class="num">32</td><td class="num">38-40</td><td>"İnternet hızı nasıl ölçülür" gövde içeriği</td></tr>
+          <tr><td>modem</td><td class="num">15</td><td class="num">28</td><td class="num">13</td><td class="num">20</td><td>"modem konumu / yeniden başlatma" pratik bölümü</td></tr>
+          <tr><td>packet loss / paket kaybı</td><td class="num">0</td><td class="num">16</td><td class="num">2</td><td class="num">8</td><td>Kısa "Paket kaybı nedir?" eğitim bloğu (Vodafone modeli)</td></tr>
+          <tr><td>5g</td><td class="num">53</td><td class="num">6</td><td class="num">2</td><td class="num">8-12</td><td>Superbox 5G stratejisiyle uyumlu mobil/5G içeriği</td></tr>
+          <tr><td>fiber</td><td class="num">4</td><td class="num">14</td><td class="num">7</td><td class="num">9-10</td><td>Test sonrası fiber CTA bağlamı</td></tr>
+          <tr><td>wifi / kablosuz</td><td class="num">20</td><td class="num">9</td><td class="num">10</td><td class="num">14</td><td>"Wi-Fi yerine kablolu bağlan" test ipucu</td></tr>
+          <tr><td>hız testi</td><td class="num">33</td><td class="num">63</td><td class="num">48</td><td class="num">~50 (koru)</td><td>H1, ilk paragraf, H2'ler, SSS · mevcut iyi</td></tr>
+          <tr><td>internet hız testi</td><td class="num">9</td><td class="num">12</td><td class="num">16</td><td class="num">~16 (koru)</td><td>Tanım H2, meta · Turkcell önde</td></tr>
+          <tr><td>ölçüm (ölç- kökü)</td><td class="num">9</td><td class="num">7</td><td class="num">20</td><td class="num">~20 (koru)</td><td>Turkcell rakiplerin önünde; güçlü yanı koru</td></tr>
+          <tr><td>ping / jitter</td><td class="num">11 / 0</td><td class="num">5 / 0</td><td class="num">13 / 4</td><td class="num">koru</td><td>Jitter'ı hiçbir rakip kullanmıyor; farklılaşma alanı</td></tr>
         </tbody>
       </table></div>
-      <p class="small muted">Not: kelimeler doğal okunacak şekilde yerleştirilmeli; aşırı tekrar (keyword stuffing) yapılmamalı. Yoğunluk hedefleri üst sınırdır.</p>
+      <div class="callout callout--info"><b>Rakip karşılaştırması özeti:</b> Turkcell teknik metrik terimlerinde (ping, jitter, ölçüm) rakiplerin önünde; ancak <b>download/indirme, mbps, modem, packet loss ve 5g</b> terimlerinde ve genel içerik hacminde geride. En yüksek öncelik: (1) download/indirme, (2) mbps. İçeriği ~1.633'ten rakip seviyesine (≈2.600-3.000 kelime) çıkarmak bu kelimelerin doğal yoğunluğunu da yükseltir. Ayrıca sayfadaki başlıkların çoğu hız testi konusundan değil çapraz satış kartlarından (Superbox, Pasaj vb.) geliyor; hız testine odaklı H2/H3 eklemek yapıyı ve yoğunluğu birlikte iyileştirir.</div>
+      <p class="small muted">Geçiş sayıları, üç markanın canlı hız testi sayfalarının görünür metni (nav/footer dahil) üzerinden hesaplandı; gözlem Haziran 2026. Kelimeler doğal okunacak şekilde yerleştirilmeli, aşırı tekrar (keyword stuffing) yapılmamalı.</p>
 
       <h3>4. Eklenecek tablolar</h3>
       <ul class="clean">
-        <li><b>Hız-ihtiyaç eşleme tablosu:</b> 16-24 / 35-50 / 100 / 1000 Mbps satırları; sütunlar: ideal kullanım, 10 GB indirme süresi, ilgili Turkcell paketi (bağlantılı). Dataset şeması ile işaretlenir.</li>
+        <li><b>Hız-ihtiyaç eşleme tablosu:</b> 16-24 / 35-50 / 100 / 1000 Mbps satırları; sütunlar: ideal kullanım, 10 GB indirme süresi, ilgili Turkcell paketi (bağlantılı). Dataset şeması ile işaretlenebilir.</li>
         <li><b>İndirme süresi karşılaştırma tablosu:</b> Mbps ile örnek dosya/uygulama indirme süreleri.</li>
         <li><b>Metrik açıklama tablosu:</b> Download, Upload, Ping, Jitter, Packet Loss, Mbps tanımları ve ideal değerleri.</li>
       </ul>
+      <div class="rec"><div class="rec__head"><span class="ttl">Hız-ihtiyaç tablosu için örnek Dataset (JSON-LD) şeması</span></div><div class="rec__body">
+      <pre class="codeblock">{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "İnternet Hızına Göre İdeal Kullanım ve İndirme Süreleri",
+  "description": "Farklı internet hızlarının (Mbps) hangi kullanıma yettiğini ve 10 GB indirme süresini gösteren karşılaştırma tablosu.",
+  "creator": { "@type": "Organization", "name": "Turkcell" },
+  "url": "https://www.turkcell.com.tr/hiz-testi",
+  "variableMeasured": [
+    "İnternet hızı (Mbps)",
+    "İdeal kullanım",
+    "10 GB indirme süresi"
+  ],
+  "keywords": ["internet hızı kaç olmalı", "kaç mbps", "indirme süresi"]
+}</pre>
+      <p class="small muted">Bu şema, hız-ihtiyaç tablosunu makine tarafından okunabilir kılar; arama motorlarına tablonun bir veri seti olduğunu bildirir. Görünmez bir <span class="codei">&lt;script type="application/ld+json"&gt;</span> bloğu olarak sayfaya eklenir, ek yük bindirmez.</p>
+      </div></div>
 
       <h3>5. Eklenecek / cevaplanacak SSS</h3>
       <p>Mevcut 37 SSS korunur; rakip boşluğunu kapatmak için eklenecekler (FAQPage şeması ile):</p>
@@ -742,13 +792,23 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
       </ul>
 
       <h3>6. Özet (giriş) bölümünde ne olmalı</h3>
-      <div class="callout callout--info">İlk 1-2 cümlede ana kelime ("Turkcell internet hız testi ile…") + araç vaadi (indirme, yükleme, ping, jitter ölçümü) + tek satır değer önerisi (sonuca göre uygun Turkcell internetini öner). Bu giriş, hem kullanıcının ilk saniyesini hem de bilgi kutusu/AI Overview alıntısını hedefler. "Superonline" dili Turkcell çatısına taşınır.</div>
+      <p>Giriş paragrafı hem kullanıcının ilk saniyesini hem de bilgi kutusu/AI Overview alıntısını hedefler. Şu öğeleri sırasıyla içermeli:</p>
+      <ul class="clean">
+        <li><b>Ana kelime, ilk cümlede:</b> "Turkcell internet hız testi ile…" kalıbıyla aç; ilk 1-2 cümlede "hız testi" ve "internet hız testi" geçsin.</li>
+        <li><b>Araç vaadi:</b> ölçülen metrikleri net say · indirme (download), yükleme (upload), ping ve jitter ölçümü.</li>
+        <li><b>Alıntılanabilir tanım cümlesi:</b> "İnternet hız testi, …dır" kalıbında 1 cümlelik net tanım (bilgi kutusu/AI Overview için).</li>
+        <li><b>Tek satır değer önerisi:</b> sonuca göre uygun Turkcell internetini/paketini öneren bir cümle (dönüşüme köprü).</li>
+        <li><b>Sürtünmesizlik vurgusu:</b> "saniyeler içinde", "ücretsiz", "tek tıkla" gibi ifadelerle güven ver.</li>
+        <li><b>Marka tutarlılığı:</b> tüm "Superonline" dili Turkcell çatısına taşınır; gövde ve başlık Turkcell markasıyla yazılır.</li>
+        <li><b>Uzunluk:</b> 40-60 kelime; tek paragraf, taranabilir ve doğal okunur olmalı.</li>
+      </ul>
     </section>
 
-    <!-- 12 AKSIYON -->
+    <!-- 11 AKSIYON -->
     <section class="section" id="aksiyon">
       <div class="eyebrow">Aksiyon Planı</div>
       <h2>Yapılacaklar</h2>
+      <a class="xls-btn" href="assets/turkcell-hiz-testi-aksiyon-brief.xlsx" download><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Aksiyon planı + brief'i Excel'e aktar</a>
       <div class="legend">
         <span><span class="src src-star">★</span> önceden iletildi</span>
         <span><span class="src src-plus">+★</span> geliştirilmiş</span>
@@ -763,15 +823,15 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         <button class="tab" data-tab="t-cwv">Performans</button>
       </div>
       <div class="tab-panel active" id="t-seo">
-        <div class="rec"><div class="rec__head"><span class="prio prio-p0">P0</span><span class="src src-new">Yeni</span><span class="ttl">Marka tutarlılığı: başlık, meta ve gövde</span></div><div class="rec__body">Başlığı "İnternet Hız Testi, Speed Test &amp; Ping | Turkcell" yap; gövdedeki "Superonline" dilini Turkcell çatısına taşı. "speedtest"te zaten 2. sıra; marka netleşince hem markalı hem genel sorgularda kazanç sağlar.</div></div>
+        <div class="rec"><div class="rec__head"><span class="prio prio-p0">P0</span><span class="src src-new">Yeni</span><span class="ttl">Marka tutarlılığı: başlık, meta ve gövde</span></div><div class="rec__body">Başlığı "İnternet Hız Testi, Speed Test &amp; Ping | Turkcell" yap; gövdedeki "Superonline" dilini Turkcell çatısına taşı. "speedtest"te zaten 2. sıra; marka netleşince hem markalı hem genel keywordlerde kazanç sağlar.</div></div>
         <div class="rec"><div class="rec__head"><span class="prio prio-p0">P0</span><span class="src src-new">Yeni</span><span class="ttl">URL Rating'i yükselt (iç ve dış bağlantı)</span></div><div class="rec__body">Ana sayfa, ev interneti, mobil, 5G ve destek sayfalarından "hız testi" bağlantısı ver; dış bağlantı kazan. <span class="why">UR 12'den Türk Telekom'un 21'ini geçmek 1. sıranın önkoşulu; domain otoritesi zaten yeterli.</span></div></div>
-        <div class="rec"><div class="rec__head"><span class="prio prio-p0">P0</span><span class="src src-new">Yeni</span><span class="ttl">İç bağlantıları site içine al</span></div><div class="rec__body">superonline.net bağlantılarını turkcell.com.tr karşılıklarıyla değiştir (Bölüm 08). <span class="why">superonline.net ayrı bir alan adı; ona otorite aktarmak bu sayfanın otoritesini zayıflatıyor, kullanıcıyı da Turkcell çatısı dışına çıkarıyor.</span></div></div>
+        <div class="rec"><div class="rec__head"><span class="prio prio-p0">P0</span><span class="src src-new">Yeni</span><span class="ttl">İç bağlantıları site içine al</span></div><div class="rec__body">superonline.net bağlantılarını turkcell.com.tr karşılıklarıyla değiştir (Bölüm 07). <span class="why">superonline.net ayrı bir alan adı; ona otorite aktarmak bu sayfanın otoritesini zayıflatıyor, kullanıcıyı da Turkcell çatısı dışına çıkarıyor.</span></div></div>
         <div class="rec"><div class="rec__head"><span class="prio prio-p1">P1</span><span class="src src-star">★</span><span class="ttl">Footer'a hız testi bağlantısı ekle</span></div><div class="rec__body">Önceki PDF'te önerildi. Site genelinde iç bağlantı ve UR katkısı sağlar.</div></div>
         <div class="rec"><div class="rec__head"><span class="prio prio-p2">P2</span><span class="src src-new">Yeni</span><span class="ttl">Breadcrumb ve ping/ip araç sayfaları</span></div><div class="rec__body">Breadcrumb + BreadcrumbList şeması; "ping testi" (KD 1) ve "ip sorgulama" için site içi araç sayfaları, hız testiyle karşılıklı bağlantı.</div></div>
       </div>
       <div class="tab-panel" id="t-icerik">
         <div class="rec"><div class="rec__head"><span class="prio prio-p2">P2</span><span class="src src-done">✓ Uygulandı</span><span class="ttl">Temel ve rakip SSS'leri</span></div><div class="rec__body">Excel'de önerilen Download/Upload, "Hız Testi Ücretli mi?", "Wi-Fi ile Hız Testi" ve temel sorular artık canlıda (37 maddelik SSS, canlıda doğrulandı). Ek aksiyon gerekmez.</div></div>
-        <div class="rec"><div class="rec__head"><span class="prio prio-p1">P1</span><span class="src src-new">Yeni</span><span class="ttl">Boşluk kelimelerini içerikle kapat</span></div><div class="rec__body">"internet hızı ölçme", "adsl hız testi", "internet speed test", "mbps test" için Bölüm 11'deki H2 başlıklarını ekle. Rakipler bu kelimelerde Turkcell'in önünde (Bölüm 05).</div></div>
+        <div class="rec"><div class="rec__head"><span class="prio prio-p1">P1</span><span class="src src-new">Yeni</span><span class="ttl">Boşluk kelimelerini içerikle kapat</span></div><div class="rec__body">"internet hızı ölçme", "adsl hız testi", "internet speed test", "mbps test" için Bölüm 10'daki H2 başlıklarını ekle. Rakipler bu kelimelerde Turkcell'in önünde (Bölüm 05).</div></div>
         <div class="rec"><div class="rec__head"><span class="prio prio-p1">P1</span><span class="src src-new">Yeni</span><span class="ttl">Hız-ihtiyaç ve indirme süresi tabloları</span></div><div class="rec__body">Türk Telekom, Vodafone ve TurkNet'te var, Turkcell'de yok. Her satır ilgili Turkcell pakete bağlanır (bilgiden dönüşüme köprü).</div></div>
         <div class="rec"><div class="rec__head"><span class="prio prio-p1">P1</span><span class="src src-plus">+★</span><span class="ttl">5G/mobil içerik bloğu ve 5G SSS'leri</span></div><div class="rec__body">PDF ve Excel'deki 5G önerilerinin geliştirilmiş hali: bağımsız "Mobil ve 5G Hız Testi" bölümü + 5G SSS kümesi. "5g hız testi" AI Overview hedefi.</div></div>
         <div class="rec"><div class="rec__head"><span class="prio prio-p1">P1</span><span class="src src-star">★</span><span class="ttl">Uzun kuyruk mobil SSS'leri</span></div><div class="rec__body">Excel'de önerilen ~12 mobil soru hâlâ eksik (eski SIM, modem çip seti, baz istasyonu, Carrier Aggregation, adil kullanım). Turkcell'in mobil gücüyle örtüşür.</div></div>
@@ -796,11 +856,11 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
       </div>
     </section>
 
-    <!-- 13 ONCEKI -->
+    <!-- 12 ONCEKI -->
     <section class="section" id="onceki">
       <div class="eyebrow">Önceki Çalışmaların Durumu</div>
       <h2>İletilen iki çalışmanın güncel durumu</h2>
-      <p class="small muted">Önceden iletilenler ★, geliştirilmiş haller +★, canlı sayfada uygulanmış olanlar ✓ ile işaretlendi. Tüm durumlar <b>canlı turkcell.com.tr/hiz-testi sayfası</b> üzerinde tek tek doğrulandı (gözlem 26-29 Haziran 2026): sayfada toplam <b>37 SSS</b> tespit edildi; aşağıdaki "uygulandı" maddeleri bu 37 SSS içinde bulunmaktadır, "uygulanmamış" maddeler sayfada yer almamaktadır.</p>
+      <p class="small muted">Önceden iletilenler ★, geliştirilmiş haller +★, canlı sayfada uygulanmış olanlar ✓ ile işaretlendi. İletilen maddeler <b>turkcell.com.tr/hiz-testi</b> sayfası üzerinden mevcut durum kontrol edilerek ilerlendi: sayfada toplam <b>37 SSS</b> tespit edildi; aşağıdaki "uygulandı" maddeleri bu 37 SSS içinde bulunmaktadır, "uygulanmamış/yok" maddeler sayfada yer almamaktadır.</p>
       <h3>Çalışma 1 · PDF "5G Optimizasyon Önerileri"</h3>
       <div class="table-wrap"><table>
         <thead><tr><th>Öneri</th><th>Durum</th><th>Bu rapordaki karşılığı</th></tr></thead>
@@ -815,54 +875,67 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         </tbody>
       </table></div>
       <h3>Çalışma 2 · Excel "SSS Önerileri"</h3>
+      <p class="small muted">Excel'deki SSS önerileri konu gruplarına ayrılarak canlı sayfadaki 37 SSS ile tek tek eşleştirildi. "Uygulandı" gruplar canlıda mevcut; "Yok" gruplar eklenmeli.</p>
       <div class="table-wrap"><table>
-        <thead><tr><th>Grup</th><th>Durum</th><th>Bu rapordaki karşılığı</th></tr></thead>
+        <thead><tr><th>SSS Grubu</th><th>Örnek sorular</th><th>Durum (canlı)</th><th>Aksiyon</th></tr></thead>
         <tbody>
-          <tr><td>Temel SSS (Mbps, Packet Loss, Jitter, Nasıl Yapılır)</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td><span class="src src-done">✓</span> canlıda doğrulandı</td></tr>
-          <tr><td>Rakip SSS (Download/Upload, Ücretli mi, Wi-Fi, Güvenilir mi)</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td><span class="src src-done">✓</span> canlıda doğrulandı</td></tr>
-          <tr><td>Uzun kuyruk mobil SSS (eski SIM, çip seti, baz istasyonu, Carrier Aggregation vb.)</td><td><span class="pill p-bad">Yok</span></td><td><span class="src src-star">★</span> İçerik · canlıda bulunmuyor</td></tr>
-          <tr><td>5G ve ADSL SSS'leri</td><td><span class="pill p-bad">Yok</span></td><td><span class="src src-plus">+★</span> 5G içerik bloğu · canlıda bulunmuyor</td></tr>
+          <tr><td>Temel / tanım</td><td>Hız testi nedir? · İnternet hız testi (speed test) nedir? · Nasıl yapılır? · Nasıl çalışır?</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td>Koru</td></tr>
+          <tr><td>Ölçüm</td><td>İnternet hızı nasıl ölçülür? · İndirme hızı nasıl ölçülür? · Hat hızı nasıl öğrenilir?</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td>Bağımsız H2 ile güçlendir</td></tr>
+          <tr><td>Metrikler</td><td>Mbps nedir? · Ping nedir? · Jitter nedir? · Packet loss nedir? · Download/Upload nedir?</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td>Koru, tablolaştır</td></tr>
+          <tr><td>İdeal hız</td><td>İnternet hızı kaç olmalı? · İdeal kaç Mbps? · Download/upload kaç olmalı?</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td>Hız-ihtiyaç tablosuyla birleştir</td></tr>
+          <tr><td>Sorun giderme</td><td>Hızım neden düşük? · Yavaşlatan uygulamalar · Nasıl hızlandırılır?</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td>Koru</td></tr>
+          <tr><td>Güven / ücret</td><td>Hız testi ücretli mi? · Güvenilir mi?</td><td><span class="pill p-pos">Uygulandı ✓</span></td><td>Koru</td></tr>
+          <tr><td>Bağlantı türü (ADSL / fiber)</td><td>ADSL hız testi nasıl yapılır? · ADSL ile fiber hız farkı nedir?</td><td><span class="pill p-bad">Yok</span></td><td><span class="src src-new">Ekle</span> · "adsl hız testi" boşluğu</td></tr>
+          <tr><td>5G kümesi</td><td>5G nedir? · Faydaları? · 4.5G SIM 5G destekler mi? · 5G ücretli mi? · Nasıl geçilir? · 5G testinde nelere dikkat?</td><td><span class="pill p-bad">Yok</span></td><td><span class="src src-plus">+★</span> Ekle · Türk Telekom'da var</td></tr>
+          <tr><td>Uzun kuyruk mobil</td><td>Eski SIM 5G sınırı · modem çip seti · baz istasyonu uzaklığı · Carrier Aggregation · adil kullanım · mobil upload düşüklüğü · kapalı alanda hız</td><td><span class="pill p-bad">Yok</span></td><td><span class="src src-star">★</span> Ekle · Excel'de vardı, hâlâ eksik</td></tr>
         </tbody>
       </table></div>
-      <div class="insight"><span class="lead-in">Özet</span>Excel'in temel ve rakip SSS önerileri canlıda uygulanmış (37 SSS içinde doğrulandı). PDF'in 5G ve dönüşüm önerilerinin neredeyse tamamı açık; 5G ve ADSL SSS'leri ile uzun kuyruk mobil sorular sayfada bulunmuyor. En yüksek kazanç, açık kalan 5G, dönüşüm ve şema önerilerinde.</div>
+      <div class="insight"><span class="lead-in">Özet</span>Excel'in temel, ölçüm, metrik, ideal hız, sorun giderme ve güven grupları canlıda uygulanmış (37 SSS içinde doğrulandı). Açık kalan üç grup: <b>ADSL/bağlantı türü</b>, <b>5G kümesi</b> ve <b>uzun kuyruk mobil</b> sorular. PDF'in 5G ve dönüşüm önerilerinin neredeyse tamamı da açık. En yüksek kazanç bu açık gruplarda + dönüşüm ve şema önerilerinde.</div>
     </section>
 
-    <!-- 14 YOL -->
+    <!-- 13 YOL -->
     <section class="section" id="yol">
-      <div class="eyebrow">Öncelik &amp; Yol Haritası</div>
-      <h2>Ne önce yapılmalı</h2>
+      <div class="eyebrow">Öncelik Sırası</div>
+      <h2>Öncelik Sırası</h2>
+      <p>Aksiyonlar üç faza ayrıldı; her faz bir öncekinin üzerine kurulur. Aksiyonların etki/çaba önceliklendirmesi Bölüm 11 · Aksiyon Planı'ndadır.</p>
       <div class="grid-3">
-        <div class="card"><h3 style="margin-top:0">Faz 1 · Temel (0-4 hafta)</h3><ul class="clean"><li>Marka tutarlılığı (başlık/meta/gövde)</li><li>İç bağlantıları site içine alma</li><li>FAQPage + WebApplication şeması</li><li>Footer hız testi bağlantısı</li></ul><p class="small muted">Düşük çaba, yüksek etki. URL Rating ve marka sinyalini hızla iyileştirir.</p></div>
-        <div class="card"><h3 style="margin-top:0">Faz 2 · İçerik ve GEO (4-8 hafta)</h3><ul class="clean"><li>Boşluk kelimeleri (Bölüm 05) için içerik</li><li>Hız-ihtiyaç ve indirme süresi tabloları</li><li>5G/ADSL/ölçüm içeriği + SSS</li><li>Alıntılanabilir tanım, breadcrumb</li></ul><p class="small muted">Türk Telekom'un içerik avantajını kapatır, AI Overview'a girer.</p></div>
-        <div class="card"><h3 style="margin-top:0">Faz 3 · Dönüşüm (8-12 hafta)</h3><ul class="clean"><li>Teste bağlı akıllı paket önerisi</li><li>Net fiyatlı paket kartları</li><li>Adres/altyapı lead akışı ve form</li><li>ping/ip araç sayfaları</li></ul><p class="small muted">Sayfayı dönüşüm kanalına çevirir; tasarım örneğinde uygulandı.</p></div>
+        <div class="card"><h3 style="margin-top:0">Faz 1 · Temel</h3><ul class="clean">
+          <li>Marka tutarlılığı: başlık, meta ve gövdeyi Turkcell çatısına taşı ("Superonline" dilini kaldır)</li>
+          <li>superonline.net bağlantılarını turkcell.com.tr karşılıklarıyla değiştir (IP için /kampanya/ip-adresim dahil)</li>
+          <li>FAQPage + WebApplication şeması ekle</li>
+          <li>Footer ve ilgili sayfalardan hız testine iç bağlantı</li>
+        </ul><p class="small muted">Düşük çaba, yüksek etki. URL Rating ve marka sinyalini hızla iyileştirir.</p></div>
+        <div class="card"><h3 style="margin-top:0">Faz 2 · İçerik ve GEO</h3><ul class="clean">
+          <li>Boşluk kelimeleri için içerik (internet speed test, adsl hız testi, internet hızı ölçme, mbps test)</li>
+          <li>Hız-ihtiyaç eşleme + indirme süresi + metrik tabloları (her satır pakete bağlı) + Dataset şeması</li>
+          <li>5G / ADSL / ölçüm içeriği ve eksik SSS'ler (FAQPage)</li>
+          <li>Alıntılanabilir tanım, breadcrumb + BreadcrumbList şeması, llms.txt/robots erişimi</li>
+          <li>İçerik hacmini rakip seviyesine çıkar (~2.600-3.000 kelime); download/indirme ve mbps yoğunluğunu artır</li>
+        </ul><p class="small muted">Türk Telekom'un içerik avantajını kapatır, AI Overview'a girer.</p></div>
+        <div class="card"><h3 style="margin-top:0">Faz 3 · Dönüşüm</h3><ul class="clean">
+          <li>Teste bağlı akıllı paket önerisi (sonuç-tetikli)</li>
+          <li>Net fiyatlı paket kartları + "Sana Uygun Paketler" karoseli (One / 5G hat / ev interneti)</li>
+          <li>Adres/altyapı lead akışı ve form</li>
+          <li>İki "Neler Var" on-domain kart hub'ı + geniş ekran yan ray CTA'ları</li>
+          <li>ping ve ip araç sayfaları ile hız testi arasında karşılıklı bağlantı</li>
+        </ul><p class="small muted">Sayfayı dönüşüm kanalına çevirir; tasarım örneğinde uygulandı.</p></div>
       </div>
-      <div class="table-wrap" style="margin-top:16px"><table>
-        <thead><tr><th>Aksiyon</th><th>Etki</th><th>Çaba</th><th>Öncelik</th></tr></thead>
-        <tbody>
-          <tr><td>Şema seti (FAQPage + WebApplication + Breadcrumb)</td><td>Yüksek</td><td>Düşük</td><td><span class="prio prio-p0">P0</span></td></tr>
-          <tr><td>İç bağlantı düzeni + marka tutarlılığı</td><td>Yüksek</td><td>Düşük</td><td><span class="prio prio-p0">P0</span></td></tr>
-          <tr><td>URL Rating yükseltme</td><td>Yüksek</td><td>Orta</td><td><span class="prio prio-p0">P0</span></td></tr>
-          <tr><td>Boşluk kelimeleri + tablolar (Bölüm 05, 11)</td><td>Yüksek</td><td>Orta</td><td><span class="prio prio-p1">P1</span></td></tr>
-          <tr><td>Teste bağlı akıllı paket önerisi</td><td>Yüksek</td><td>Orta-Yüksek</td><td><span class="prio prio-p1">P1</span></td></tr>
-          <tr><td>ping/ip araç sayfaları (kolay 1. sıra)</td><td>Orta</td><td>Orta</td><td><span class="prio prio-p2">P2</span></td></tr>
-        </tbody>
-      </table></div>
     </section>
 
-    <!-- 15 YONTEM -->
+    <!-- 14 YONTEM -->
     <section class="section" id="yontem">
-      <div class="eyebrow">Yöntem &amp; Kapsam</div>
-      <h2>Veriler nereden geldi ve nasıl doğrulandı</h2>
-      <p>Rapordaki tüm sayılar canlı araç çağrılarıyla, gözlem tarihiyle alınmıştır. Hacim ve sıralama için <b>Ahrefs</b>, sayfa içi ve performans ölçümü için <b>DataForSEO</b> ve <b>Playwright</b> kullanılmıştır. Kaynaklar arasında küçük farklar olabileceğinden bir kaynak esas alınmış, diğeri çapraz kontrol için kullanılmıştır.</p>
+      <div class="eyebrow">Data Kaynakları</div>
+      <h2>Data'ların Alındığı Kaynaklar</h2>
+      <p>Rapordaki tüm sayılar canlı araç çağrılarıyla, gözlem tarihiyle alınmıştır. Hacim ve sıralama için <b>Ahrefs</b>, sayfa içi ve performans ölçümü için <b>DataForSEO</b> ve gerçek tarayıcı ölçümü kullanılmıştır. Kaynaklar arasında küçük farklar olabileceğinden bir kaynak esas alınmış, diğeri çapraz kontrol için kullanılmıştır.</p>
       <div class="grid-3">
         <div class="card"><b>Ahrefs</b><br><span class="small muted">Kelime hacmi, zorluk (KD), niyet, SERP sıraları ve rakip kelime listeleri. Ülke: Türkiye.</span></div>
         <div class="card"><b>DataForSEO</b><br><span class="small muted">Sayfa içi denetim, içerik analizi, Lighthouse performans ölçümü ve şema kontrolü.</span></div>
-        <div class="card"><b>Playwright</b><br><span class="small muted">Hedef ve rakip sayfaların masaüstü/mobil ekran görüntüleri, canlı SERP ve performans ölçümü.</span></div>
+        <div class="card"><b>Gerçek tarayıcı ölçümü</b><br><span class="small muted">Hedef ve rakip sayfaların masaüstü/mobil ekran görüntüleri, canlı SERP ve performans ölçümü.</span></div>
       </div>
       <p class="small muted" style="margin-top:12px"><b>Gözlem tarihi:</b> 26-27 Haziran 2026. <b>Rakip seti:</b> Türk Telekom, Fast.com, Speedtest.net (Ookla), Vodafone, TurkNet. (superonline.net ayrı bir alan adı olarak referans alındı.) <b>İşaretleme sistemi:</b> <span class="src src-star">★ önceden iletildi</span> <span class="src src-plus">+★ geliştirilmiş</span> <span class="src src-new">Yeni</span> <span class="src src-done">✓ uygulandı</span>.</p>
     </section>
 
-    <!-- 16 SOZLUK -->
+    <!-- 15 SOZLUK -->
     <section class="section" id="sozluk">
       <div class="eyebrow">Terim Sözlüğü &amp; Kaynaklar</div>
       <h2>Terimler</h2>
@@ -882,15 +955,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
           <li><b>long-tail</b> · düşük hacimli, niş, uzun aramalar.</li>
         </ul></div>
       </div>
-      <h3>Kaynaklar</h3>
-      <p class="small muted">Ahrefs (kelime ve SERP, Türkiye), DataForSEO (sayfa içi, içerik, Lighthouse, şema), Playwright (ekran görüntüsü, canlı SERP, performans). Tüm gözlemler 26-27 Haziran 2026. Ham bulgular: <span class="codei">data/</span> klasörü.</p>
     </section>
-
-    <footer>
-      <p><b>Turkcell Hız Testi · SEO / GEO Raporu, Rakip Analizi ve İçerik Brief'i</b></p>
-      <p>Hazırlayan: Inbound <img src="assets/inbound-wordmark.png" alt="Inbound"> · Veri: Ahrefs + DataForSEO + Playwright · Gözlem: 26-27 Haziran 2026</p>
-      <p class="small">İşaretleme: ★ önceden iletildi · +★ geliştirilmiş · Yeni · ✓ uygulandı. Sayılar gözlem anına aittir, sıralar gün içinde değişebilir.</p>
-    </footer>
   </main>
 </div>
 
@@ -901,20 +966,19 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
     <h4>Bölümler <button class="toc-close" data-close aria-label="Kapat">&times;</button></h4>
     <a href="#ozet"><span class="n">01</span> Yönetici Özeti</a>
     <a href="#durum"><span class="n">02</span> Sayfanın Mevcut Durumu</a>
-    <a href="#serp"><span class="n">03</span> SERP &amp; Görünürlük</a>
+    <a href="#serp"><span class="n">03</span> Sıralamalar &amp; Odak Keywordler</a>
     <a href="#kelime"><span class="n">04</span> Kelime &amp; Talep Havuzu</a>
-    <a href="#gap"><span class="n">05</span> Rakip Boşluk Analizi</a>
+    <a href="#gap"><span class="n">05</span> Content Gap &amp; Rakip Karşılaştırması</a>
     <a href="#geo"><span class="n">06</span> AI Overview &amp; GEO</a>
-    <a href="#rakip"><span class="n">07</span> Rakip İçerik Karşılaştırması</a>
-    <a href="#linkler"><span class="n">08</span> Eski Linkler &amp; İç Yönlendirme</a>
-    <a href="#cro"><span class="n">09</span> CRO / Dönüşüm / Lead</a>
-    <a href="#teknik"><span class="n">10</span> Teknik, Hız &amp; fast.com</a>
-    <a href="#brief"><span class="n">11</span> İçerik Yazım Brief'i</a>
-    <a href="#aksiyon"><span class="n">12</span> Aksiyon Planı</a>
-    <a href="#onceki"><span class="n">13</span> Önceki Çalışmaların Durumu</a>
-    <a href="#yol"><span class="n">14</span> Öncelik &amp; Yol Haritası</a>
-    <a href="#yontem"><span class="n">15</span> Yöntem &amp; Kapsam</a>
-    <a href="#sozluk"><span class="n">16</span> Terim Sözlüğü &amp; Kaynaklar</a>
+    <a href="#linkler"><span class="n">07</span> Eski Linkler &amp; İç Yönlendirme</a>
+    <a href="#cro"><span class="n">08</span> CRO / Dönüşüm / Lead</a>
+    <a href="#teknik"><span class="n">09</span> Teknik &amp; On-Page SEO</a>
+    <a href="#brief"><span class="n">10</span> İçerik Brief'i</a>
+    <a href="#aksiyon"><span class="n">11</span> Aksiyon Planı</a>
+    <a href="#onceki"><span class="n">12</span> Önceki Çalışmaların Durumu</a>
+    <a href="#yol"><span class="n">13</span> Öncelik Sırası</a>
+    <a href="#yontem"><span class="n">14</span> Data Kaynakları</a>
+    <a href="#sozluk"><span class="n">15</span> Terim Sözlüğü</a>
   </div>
 </div>
 <div class="lightbox" id="lb"><span class="lightbox__close" id="lbClose">&times;</span><div><img id="lbImg" src="" alt=""><div class="lightbox__cap" id="lbCap"></div></div><div class="lightbox__hint">Kaydırarak tüm sayfayı görebilirsiniz · kapatmak için ESC veya boşluğa tıklayın</div></div>
