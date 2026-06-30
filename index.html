@@ -59,7 +59,8 @@ main{min-width:0;max-width:100%}
 .toc-scroll{overflow-y:auto;min-height:0;display:flex;flex-direction:column;gap:1px;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
 .toc-scroll::-webkit-scrollbar{width:6px}.toc-scroll::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:6px}
 .sidenav a{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:10px;color:var(--ink-2);font-size:.875rem;font-weight:600;text-decoration:none;transition:transform .14s,background .14s,color .14s,box-shadow .14s}
-.sidenav a:hover{background:var(--surface-2);color:var(--navy);text-decoration:none;transform:translateX(4px);box-shadow:inset 3px 0 0 var(--yellow)}
+.sidenav a:hover{background:var(--surface-2);color:var(--navy);text-decoration:none;transform:translateX(3px)}
+.sidenav a:hover .n{background:var(--yellow);color:var(--navy-deep)}
 .sidenav a.active{background:var(--blue-soft);color:var(--navy)}
 .sidenav a .n{width:21px;height:21px;border-radius:6px;background:var(--surface-2);color:var(--ink-3);font-size:.665rem;font-weight:800;display:grid;place-items:center;flex:none}
 .sidenav a.active .n{background:var(--yellow);color:var(--navy-deep)}
@@ -599,7 +600,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         </div>
       </div>
 
-      <h3>Tasarım örneğinin son hali · 5 dönüşüm varyantı</h3>
+      <h3>Tasarım örneği · 5 dönüşüm varyantı</h3>
       <p>Test bittiğinde, seçili varyanta göre aracın hemen altında farklı bir dönüşüm modülü canlanır. Beş varyant, aynı sayfanın beş dönüşüm yaklaşımını gösterir:</p>
       <div class="table-wrap"><table>
         <thead><tr><th>Varyant</th><th>Sonuç modülü (ne gösterir)</th><th>Birincil aksiyon</th></tr></thead>
@@ -614,14 +615,14 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
 
       <h3>Her varyantta ortak bileşenler</h3>
       <ul class="clean">
-        <li><b>Canlı klonu:</b> üst menü, breadcrumb, hero test aracı ve footer canlı sayfayla bire bir; Turkcell marka renkleri ve logosu. Sonuç paneli başında "Testin bitti, sana en uygun hızı bulalım" CTA'sı.</li>
-        <li><b>İki "Neler Var" kart bölümü:</b> (1) "Turkcell Ev İnterneti'nde Neler Var?" (mavi kartlar; büyük Superbox kartı + 8 araç/kampanya), (2) "Turkcell'de Neler Var?" (lacivert kartlar; Pasaj, Yeni Hat, Numara Taşıma, TL/Paket, Ek Paket). Tüm bağlantılar turkcell.com.tr içinde (on-domain), canlıdaki ikon ve düzenle.</li>
-        <li><b>"Sana uygun Turkcell paketleri" karoseli:</b> akış içinde 4 paket (One Premium, 5G Ultra Platinum, Superbox 5G, Superonline Fiber); E varyantında sonuç modülü zaten paketleri gösterdiği için bu bölüm gizlenir.</li>
-        <li><b>Yan ray:</b> geniş ekranda solda yüzen, mobilde inline iki kart (One + ikinci paket). İçerik, rozet, CTA ve logolar <b>varyanta göre değişir</b> (ör. D'de "Ev İnterneti + One" + Superbox; C'de fiyat vurgulu One Premium + 5G Ultra Platinum).</li>
-        <li><b>Hız Testi Karşılaştırma Tabloları:</b> hız-ihtiyaç, indirme süresi ve metrik tabloları; her satır ilgili Turkcell pakete bağlı.</li>
-        <li><b>Mobil ve 5G bloğu:</b> "Mobilde 5G ile en yüksek hız için Turkcell'i tercih et" CTA + "5G'yi keşfet" ve "5G paketlerini incele" linkleri.</li>
-        <li><b>İçerik + interaktif SSS:</b> canlıdaki gövde içeriği (ilk paragraf görünür, "Devamını oku" ile açılır) + kümelenmiş, açılır-kapanır 45 maddelik SSS akordeonu.</li>
-        <li><b>Görsel kalite:</b> gradient arkaplan, nabız animasyonlu "Test tamamlandı" rozeti, çerçeve etrafında dönen ışık efektli (border-beam) CTA butonları, footer'da 4 kolonlu iç bağlantı menüsü.</li>
+        <li><b>Canlı klonu:</b> Üst menü, breadcrumb, hero test aracı ve footer; canlı sayfayla bire bir, Turkcell marka renkleri ve logosuyla yeniden kurulur. Sonuç panelinin başında "Testin bitti, sana en uygun hızı bulalım" CTA'sı yer alır.</li>
+        <li><b>İki "Neler Var" kart bölümü:</b> "Turkcell Ev İnterneti'nde Neler Var?" mavi kartlarında büyük Superbox kartı ile 8 araç/kampanya, "Turkcell'de Neler Var?" lacivert kartlarında Pasaj, Yeni Hat, Numara Taşıma, TL/Paket ve Ek Paket bulunur. Tüm bağlantılar canlıdaki ikon ve düzenle, turkcell.com.tr içinde on-domain tutulur.</li>
+        <li><b>"Sana uygun Turkcell paketleri" karoseli:</b> Akış içinde One Premium, 5G Ultra Platinum, Superbox 5G ve Superonline Fiber olmak üzere 4 paket sunulur. E varyantında sonuç modülü paketleri zaten gösterdiği için bu bölüm gizlenir.</li>
+        <li><b>Yan ray:</b> Geniş ekranda solda yüzen, mobilde inline iki kart One ile ikinci paketi taşır; içerik, rozet, CTA ve logolar varyanta göre değişir. Örneğin D varyantında "Ev İnterneti + One" ile Superbox, C varyantında fiyat vurgulu One Premium ile 5G Ultra Platinum gösterilir.</li>
+        <li><b>Hız Testi Karşılaştırma Tabloları:</b> Hız-ihtiyaç, indirme süresi ve metrik tabloları, her satırı ilgili Turkcell pakete bağlanacak şekilde verilir.</li>
+        <li><b>Mobil ve 5G bloğu:</b> "Mobilde 5G ile en yüksek hız için Turkcell'i tercih et" CTA'sı ile "5G'yi keşfet" ve "5G paketlerini incele" linkleri bulunur.</li>
+        <li><b>İçerik + interaktif SSS:</b> Canlıdaki gövde içeriği, ilk paragrafı görünür ve gerisi "Devamını oku" ile açılır biçimde sunulur; altında kümelenmiş ve açılır-kapanır 45 maddelik SSS akordeonu yer alır.</li>
+        <li><b>Görsel kalite:</b> Gradient arkaplan, nabız animasyonlu "Test tamamlandı" rozeti, çerçeve etrafında dönen ışık efektli border-beam CTA butonları ve footer'da 4 kolonlu iç bağlantı menüsü bulunur.</li>
       </ul>
 
       <h3>Tasarım örneğindeki bileşenler ve sayfada yerleşimi</h3>
@@ -660,7 +661,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         </div>
       </div>
       <h3>Demo bileşenleri: neden eklenmeli ve beklenen kazanım</h3>
-      <p>Tasarım örneğinin son halindeki başlıca bileşenler ve her birinin dönüşüm/SEO gerekçesi:</p>
+      <p>Tasarım örneğindeki başlıca bileşenler ve her birinin dönüşüm/SEO gerekçesi:</p>
       <div class="table-wrap"><table>
         <thead><tr><th>Bileşen (demo)</th><th>Ne yapıyor</th><th>Neden eklenebilir</th><th>Beklenen kazanım</th></tr></thead>
         <tbody>
@@ -675,7 +676,7 @@ footer img{height:22px;vertical-align:middle;margin-left:6px;opacity:.9}
         </tbody>
       </table></div>
       <div class="btnrow"><a class="btn btn-y" href="demo/">Tasarım örneğini aç · 5 varyant</a></div>
-      <p class="small muted">Tasarım örneği, sayfanın üst menü ve footer yapısını koruyup gövdeyi 5 dönüşüm yaklaşımıyla yeniden kurar: A · Akıllı Sonuç, B · Hız Karnesi, C · Değer/Paket, D · Lead/Altyapı, E · Sana Uygun Paketler. Bileşenler varyanta göre farklılaşır (örn. yan ray kartları ve "Sana Uygun Paketler" içeriği her varyantta değişir). Yukarıdaki açıklamalar tasarım örneğinin canlı son hâliyle birebir eşleşir.</p>
+      <p class="small muted">Tasarım örneği, sayfanın üst menü ve footer yapısını koruyup gövdeyi 5 dönüşüm yaklaşımıyla yeniden kurar: A · Akıllı Sonuç, B · Hız Karnesi, C · Değer/Paket, D · Lead/Altyapı, E · Sana Uygun Paketler. Bileşenler varyanta göre farklılaşır (örn. yan ray kartları ve "Sana Uygun Paketler" içeriği her varyantta değişir). Yukarıdaki açıklamalar tasarım örneğinin canlı hâliyle birebir eşleşir.</p>
     </section>
 
     <!-- 09 TEKNIK -->
